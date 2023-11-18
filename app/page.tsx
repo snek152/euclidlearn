@@ -1,6 +1,7 @@
 import Image from "next/image";
 import bg from "@/images/background.svg";
 import Link from "next/link";
+import trusted from "@/images/trusted.png";
 
 export default function Home() {
   return (
@@ -37,10 +38,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative flex justify-center">
-        <div className="z-10 flex flex-col h-full gap-5 w-[95%] items-center justify-center p-5 py-10">
+      <section className="relative flex h-full p-5 gap-5 items-center justify-center">
+        <Image
+          src={trusted}
+          alt="A person helping another out"
+          className="w-[35%] aspect-[6/4] object-cover object-top rounded-3xl shadow-sm"
+        />
+        <div className="z-10 flex flex-col h-full gap-5 w-[95%] items-left justify-center p-5 py-10">
           <h1 className="font-dm text-4xl">Trusted by Top Institutions</h1>
-          <h2 className="font-antic text-xl text-center max-w-[60ch]">
+          <h2 className="font-antic text-xl text-left max-w-[60ch]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -50,6 +56,10 @@ export default function Home() {
           </h2>
         </div>
       </section>
+      <section className="p-5">
+        <h1 className="font-dm text-4xl">What We Offer</h1>
+      </section>
+      <section></section>
     </>
   );
 }

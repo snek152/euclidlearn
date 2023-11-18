@@ -6,8 +6,10 @@ import learn from "@/images/Learn.png";
 import { navLinks } from "@/lib/navLinks";
 import Link from "next/link";
 import { Fragment } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const router = usePathname();
   return (
     <Popover
       as="nav"
@@ -65,28 +67,58 @@ export default function Navbar() {
               <Link
                 href={link.href}
                 key={i}
-                className="font-dekko text-xl hover:text-lightblue transition-colors"
+                className={`font-dekko text-xl flex flex-col group transition duration-300 ${
+                  router === link.href ? "text-lightblue" : "text-white"
+                }`}
               >
                 {link.label}
+                <span
+                  className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-0.5 h-0.5 ${
+                    router === link.href ? "bg-lightblue" : "bg-white"
+                  }`}
+                />
               </Link>
             ) : (
               <Menu key={i} as="div" className="relative">
-                <Menu.Button className="font-dekko text-xl hover:text-lightblue transition-colors flex items-center gap-1">
-                  {link.label}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-5 h-5"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                <Menu.Button
+                  className={`font-dekko text-xl group transition duration-300 ${
+                    link.subLinks?.find((val) => val.href == router) !=
+                    undefined
+                      ? "text-lightblue"
+                      : "text-white"
+                  }`}
+                >
+                  <span className="flex items-center gap-1">
+                    {link.label}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                      <path
+                        className="group-hover:animate-wiggle origin-center"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5"
+                      />
+                    </svg>
+                  </span>
+                  {/* <span
+                    className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-0.5 h-0.5 ${
+                      link.subLinks?.find((val) => val.href == router) !=
+                      undefined
+                        ? "text-lightblue"
+                        : "text-white"
+                    }`}
+                  /> */}
                 </Menu.Button>
                 <Transition
                   as={Fragment}
@@ -105,9 +137,18 @@ export default function Navbar() {
                             href={subLink.href!}
                             className={`${
                               active ? "" : ""
-                            } font-dekko text-lg group flex w-full items-center py-1 px-3 text-white hover:text-lightblue transition-colors`}
+                            } font-dekko text-lg flex flex-col w-auto py-1 px-3 text-white transition duration-300`}
                           >
-                            {subLink.label}
+                            <div className="group py-0.5 inline-flex flex-col w-min whitespace-nowrap">
+                              {subLink.label}
+                              <span
+                                className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-1 h-0.5 ${
+                                  router === link.href
+                                    ? "bg-lightblue"
+                                    : "bg-white"
+                                }`}
+                              />
+                            </div>
                           </Link>
                         )}
                       </Menu.Item>
@@ -119,10 +160,54 @@ export default function Navbar() {
           )}
           <Link
             href="/register"
-            className="font-dekko text-black text-xl bg-lightblue px-5 h-full py-2 rounded-full shadow-sm"
+            className="font-dekko text-black text-xl bg-lightblue px-5 h-full py-2 rounded-full shadow-sm relative inline-flex items-center justify-center overflow-hidden font-medium transition duration-300 ease-out group"
           >
-            Register Now
+            <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-blue bg-opacity-30 group-hover:translate-x-0 ease">
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
+            </span>
+            <span className="absolute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-x-full ease">
+              Register Now
+            </span>
+            <span className="relative invisible">Register Now</span>
           </Link>
+          {/* <a
+            href="#_"
+            class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group"
+          >
+            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
+            </span>
+            <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">
+              Button Text
+            </span>
+            <span class="relative invisible">Button Text</span>
+          </a> */}
         </div>
       </div>
     </Popover>

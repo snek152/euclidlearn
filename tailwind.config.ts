@@ -20,6 +20,16 @@ const config: Config = {
         lightblue: "#A3CDF1",
         gray: "#8B8C89",
       },
+      keyframes: {
+        wiggle: {
+          "0%": { transform: "translateY(2px)" },
+          "50%": { transform: "translateY(-2px)" },
+          "100%": { transform: "translateY(2px)" },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite",
+      },
     },
   },
   plugins: [],
