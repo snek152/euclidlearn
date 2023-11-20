@@ -22,13 +22,15 @@ const config: Config = {
       },
       keyframes: {
         wiggle: {
-          "0%": { transform: "translateY(2px)" },
-          "50%": { transform: "translateY(-2px)" },
-          "100%": { transform: "translateY(2px)" },
+          "0%": { transform: "translateY(0)" },
+          "25%": { transform: "translateY(2px)" },
+          "50%": { transform: "translateY(0px)" },
+          "75%": { transform: "translateY(-2px)" },
+          "100%": { transform: "translateY(0px)" },
         },
       },
       animation: {
-        wiggle: "wiggle 1s ease-in-out infinite",
+        wiggle: "wiggle 0.75s ease-in-out infinite",
       },
     },
   },

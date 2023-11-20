@@ -137,9 +137,9 @@ export default function Navbar() {
                             href={subLink.href!}
                             className={`${
                               active ? "" : ""
-                            } font-dekko text-lg flex flex-col w-auto py-1 px-3 text-white transition duration-300`}
+                            } font-dekko text-lg group flex flex-col w-auto py-1 px-3 text-white transition duration-300`}
                           >
-                            <div className="group py-0.5 inline-flex flex-col w-min whitespace-nowrap">
+                            <div className="py-0.5 inline-flex flex-col w-min whitespace-nowrap">
                               {subLink.label}
                               <span
                                 className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-1 h-0.5 ${
