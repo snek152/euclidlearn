@@ -3,7 +3,7 @@
 import { Menu, Popover, Transition } from "@headlessui/react";
 import Image from "next/image";
 import learn from "@/images/Learn.png";
-import { navLinks } from "@/lib/navLinks";
+import { navLinks } from "@/lib/data";
 import Link from "next/link";
 import { Fragment } from "react";
 import { usePathname } from "next/navigation";
@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <Popover
       as="nav"
-      className="rounded-full w-[calc(100vw-0.5rem)] m-1 bg-navy shadow-sm pl-3 text-white flex justify-between items-center absolute z-50"
+      className="rounded-full w-[calc(100vw-0.5rem)] m-1 bg-navy shadow-sm pl-3 text-white flex justify-between items-center fixed z-50"
     >
       <h1 className="font-dm text-2xl inline-flex">
         <Image

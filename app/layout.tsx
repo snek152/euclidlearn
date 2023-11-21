@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Antic, DM_Serif_Display, Dekko } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
-import bg from "@/images/background.svg";
+import Footer from "@/components/Footer";
 
 const dm = DM_Serif_Display({
   weight: "400",
@@ -42,15 +41,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dm.variable} ${antic.variable} ${dekko.variable}`}>
-        {/* <Image
-          src={bg}
-          fill
-          alt="A grid of graduation caps"
-          className="absolute w-full h-full z-0 opacity-30 object-cover select-none"
-          draggable={false}
-        /> */}
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

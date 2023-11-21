@@ -2,6 +2,7 @@ import Image from "next/image";
 import bg from "@/images/background.svg";
 import Link from "next/link";
 import trusted from "@/images/trusted.png";
+import { whyUsReasons } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -45,7 +46,7 @@ export default function Home() {
           src={bg}
           fill
           alt="A grid of graduation caps"
-          className="absolute w-full [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0))] !h-[calc(100%+330px/3)] z-0 opacity-80 object-cover select-none"
+          className="absolute w-full [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.1))] !h-[calc(100%+7vw)] z-0 opacity-80 object-cover select-none"
           draggable={false}
         />
       </section>
@@ -70,7 +71,23 @@ export default function Home() {
       <section className="p-5">
         <h1 className="font-dm text-4xl">What We Offer</h1>
       </section>
-      <section></section>
+      <section className="p-5">
+        <h1 className="font-dm text-4xl">Why Us</h1>
+        <div className="space-y-5 pt-5">
+          {whyUsReasons.map((reason, i) => (
+            <div
+              key={i}
+              className="bg-lightblue bg-opacity-30 px-5 py-3 flex w-full items-center"
+            >
+              <h1 className="font-dm text-4xl w-8">{i + 1}</h1>
+              <p className="font-antic text-xl">{reason}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="p-5">
+        <h1 className="font-dm text-4xl">Pricing</h1>
+      </section>
     </>
   );
 }
