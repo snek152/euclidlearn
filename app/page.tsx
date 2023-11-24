@@ -48,7 +48,7 @@ export default function Home() {
           src={bg}
           fill
           alt="A grid of graduation caps"
-          className="absolute w-full [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.1))] !h-[calc(100%+7vw)] z-0 opacity-80 object-cover select-none"
+          className="absolute w-full animate-wave [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.1))] !h-[calc(100%+7vw)] z-0 opacity-80 object-cover select-none"
           draggable={false}
         />
       </section>

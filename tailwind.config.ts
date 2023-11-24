@@ -28,9 +28,18 @@ const config: Config = {
           "75%": { transform: "translateY(-2px)" },
           "100%": { transform: "translateY(0px)" },
         },
+        wave: {
+          // "0%": { transform: "translateX(2px)" },
+          // "50%": { transform: "translateX(-2px)" },
+          // "100%": { transform: "translateX(2px)" },
+          // "25%": { transform: "translateX()" },
+          // "75%": { transform: "translateX(-2rem)" },
+          // "100%": { transform: "translateX(0px)" },
+        },
       },
       animation: {
         wiggle: "wiggle 0.75s ease-in-out infinite",
+        // wave: "wave 5s ease-in-out infinite",
       },
     },
   },

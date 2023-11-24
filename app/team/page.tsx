@@ -1,5 +1,7 @@
 import SmallBanner from "@/components/SmallBanner";
 import Link from "next/link";
+import TeamCard from "./components/TeamCard";
+import image from "@/images/trusted.png";
 
 export default function About() {
   return (
@@ -16,7 +18,14 @@ export default function About() {
           Join Us
         </Link>
       </SmallBanner>
-      <section className="h-96"></section>
+      <section className="h-96">
+        <TeamCard
+          name="Woojin Yoon"
+          role="President and Lead Consultant"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          image={image}
+        />
+      </section>
     </>
   );
 }
