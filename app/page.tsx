@@ -4,6 +4,7 @@ import Link from "next/link";
 import trusted from "@/images/trusted.png";
 import { whyUsReasons } from "@/lib/data";
 import CourseFormatCard from "./components/CourseFormatCard";
+import { LinkButton } from "@/components/Button";
 
 export default function Home() {
   return (
@@ -18,18 +19,20 @@ export default function Home() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </h2>
           <div className="flex gap-3">
-            <Link
+            <LinkButton
               href="/register"
-              className="font-dekko text-white text-lg bg-blue px-4 h-full py-1  rounded-full shadow-sm"
+              className="text-white bg-blue text-lg px-4 py-1"
+              hoverClass="text-white bg-navy bg-opacity-30"
             >
               Course Registration
-            </Link>
-            <Link
-              href="/join"
-              className="font-dekko text-white text-lg bg-gray px-4 h-full py-1  rounded-full shadow-sm"
+            </LinkButton>
+            <LinkButton
+              href="/register"
+              className="text-white bg-gray text-lg px-4 py-1"
+              hoverClass="text-white bg-black bg-opacity-30"
             >
               Join Our Team
-            </Link>
+            </LinkButton>
           </div>
         </div>
         <svg
