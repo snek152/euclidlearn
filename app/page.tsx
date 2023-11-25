@@ -1,10 +1,13 @@
 import Image from "next/image";
 import bg from "@/images/background.svg";
-import Link from "next/link";
-import trusted from "@/images/trusted.png";
 import { whyUsReasons } from "@/lib/data";
 import CourseFormatCard from "./components/CourseFormatCard";
 import { LinkButton } from "@/components/Button";
+import HomeSection from "./components/HomeSection";
+
+import trusted from "@/images/trusted.png";
+import mentor from "@/images/mentor.png";
+import results from "@/images/results.png";
 
 export default function Home() {
   return (
@@ -55,26 +58,30 @@ export default function Home() {
           draggable={false}
         />
       </section>
-      <section className="relative flex h-full p-5 gap-5 items-center justify-center">
-        <Image
-          src={trusted}
-          alt="A person helping another out"
-          className="w-[35%] aspect-[6/4] object-cover object-top rounded-3xl shadow-sm"
-        />
-        <div className="z-10 flex flex-col h-full gap-5 w-[95%] items-left justify-center p-5 py-10">
-          <h1 className="font-dm text-4xl">Trusted by Top Institutions</h1>
-          <h2 className="font-antic text-xl text-left max-w-[60ch]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-          </h2>
-        </div>
-      </section>
+      <HomeSection
+        title="Redefining the Learning Experience"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        imageSrc={trusted}
+      />
+      <HomeSection
+        title="Trusted by Top Institutions"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        imageSrc={trusted}
+        reverse
+      />
+      <HomeSection
+        title="Delivering Results within Days"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        imageSrc={results}
+      />
+      <HomeSection
+        title="24/7 Access to Private Mentors"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        imageSrc={mentor}
+        reverse
+      />
       <section className="p-5">
-        <h1 className="font-dm text-4xl">Course Format</h1>
+        <h1 className="font-dm text-4xl">Why Us</h1>
         <div className="grid grid-cols-3 gap-5 py-4">
           <CourseFormatCard
             icon={
@@ -138,7 +145,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="p-5">
+      {/* <section className="p-5">
         <h1 className="font-dm text-4xl">Why Us</h1>
         <div className="space-y-5 pt-5">
           {whyUsReasons.map((reason, i) => (
@@ -151,9 +158,15 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
       <section className="p-5">
         <h1 className="font-dm text-4xl">Pricing</h1>
+        <div className="flex p-5">
+          <div className="w-[25%] flex flex-col items-center">
+            <h1 className="font-dm text-6xl">$5</h1>
+            <h2 className="font-antic text-3xl">per session</h2>
+          </div>
+        </div>
       </section>
     </>
   );

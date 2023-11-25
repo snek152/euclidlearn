@@ -10,3 +10,7 @@ html {
 body {
   @apply relative;
 }
+
+section {
+  @apply relative;
+}

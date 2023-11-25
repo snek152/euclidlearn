@@ -18,9 +18,11 @@ export default function SmallBanner(props: SmallBannerProps) {
         </h2>
         <div className="flex gap-3">{props.children}</div>
       </div>
-      <p className="z-10 font-antic text-xl text-center">
-        {props.sideDescription}
-      </p>
+      {props.sideDescription && (
+        <p className="z-10 font-antic text-xl text-center">
+          {props.sideDescription}
+        </p>
+      )}
       <svg
         className="absolute top-72 z-0"
         xmlns="http://www.w3.org/2000/svg"
