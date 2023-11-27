@@ -5,7 +5,7 @@ interface TeamCardProps {
   name: string;
   role: string;
   description: string;
-  image: StaticImport;
+  image: string;
   quals: string[];
 }
 
@@ -17,6 +17,8 @@ export default function TeamCard(props: TeamCardProps) {
           src={props.image}
           alt={props.name}
           className="object-cover aspect-square rounded-full col-span-2"
+          width={600}
+          height={600}
         />
         <div className="col-span-5 px-5 py-3 gap-1 flex flex-col justify-center">
           <div className="flex gap-2 items-end">

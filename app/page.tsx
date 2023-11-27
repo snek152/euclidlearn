@@ -1,6 +1,5 @@
 import Image from "next/image";
 import bg from "@/images/background.svg";
-import { whyUsReasons } from "@/lib/data";
 import CourseFormatCard from "./components/CourseFormatCard";
 import { LinkButton } from "@/components/Button";
 import HomeSection from "./components/HomeSection";
@@ -8,6 +7,7 @@ import HomeSection from "./components/HomeSection";
 import trusted from "@/images/trusted.png";
 import mentor from "@/images/mentor.png";
 import results from "@/images/results.png";
+import CourseCard from "./components/CourseCard";
 
 export default function Home() {
   return (
@@ -58,27 +58,36 @@ export default function Home() {
           draggable={false}
         />
       </section>
+      <section className="p-5">
+        {/* <h1 className="font-dm text-4xl">What We Offer</h1> */}
+        <div className="grid grid-cols-4 gap-5">
+          <CourseCard title="AP" href="/courses#ap" />
+          <CourseCard title="SAT/ACT" href="/courses#testprep" />
+          <CourseCard title="AIME/USACO" href="/courses#competition" />
+          <CourseCard title="Consulting" href="/consulting" />
+        </div>
+      </section>
       <HomeSection
         title="Redefining the Learning Experience"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         imageSrc={trusted}
       />
-      <HomeSection
+      {/* <HomeSection
         title="Trusted by Top Institutions"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         imageSrc={trusted}
         reverse
-      />
+      /> */}
       <HomeSection
         title="Delivering Results within Days"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         imageSrc={results}
+        reverse
       />
       <HomeSection
         title="24/7 Access to Private Mentors"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         imageSrc={mentor}
-        reverse
       />
       <section className="p-5">
         <h1 className="font-dm text-4xl">Why Us</h1>
