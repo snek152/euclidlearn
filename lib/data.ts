@@ -1,4 +1,4 @@
-import { NavLink, TeamMember } from "./types";
+import { Course, NavLink, TeamMember } from "./types";
 
 export const navLinks: NavLink[] = [
   {
@@ -6,27 +6,26 @@ export const navLinks: NavLink[] = [
     label: "Home",
   },
   {
-    label: "About Us",
-    subLinks: [
-      {
-        href: "/team",
-        label: "Meet the Team",
-      },
-      {
-        href: "/join",
-        label: "Join Us",
-      },
-    ],
+    href: "/team",
+    label: "Meet the Team",
   },
   {
     label: "Programs",
     subLinks: [
       {
-        href: "/courses",
-        label: "Courses",
+        href: "/services/ap",
+        label: "AP Tutoring",
       },
       {
-        href: "/consulting",
+        href: "/services/testprep",
+        label: "SAT/ACT Prep",
+      },
+      {
+        href: "/services/competition",
+        label: "AIME/USACO Prep",
+      },
+      {
+        href: "/services/consulting",
         label: "Consulting",
       },
     ],
@@ -72,5 +71,40 @@ export const teamMembers: TeamMember[] = [
     ],
     bio: "Hello, I'm Anirudh, and my passion lies in psychology. During my free time, I find enjoyment in watching sports, delving into Marvel movies, collecting cards, and bonding with my two dogs, Scout and April.",
     image: "/trusted.png",
+  },
+];
+
+export const apCourses: Course[] = [
+  {
+    name: "AP Calculus BC",
+    desc: "Key Concepts: Differentiation, integration, limits, and application of derivatives and integrals.\nTesting Practice: Weekly quizzes, timed exams, and comprehensive review sessions covering topics from both AB and BC Calculus, including multiple-choice and free-response question practice.",
+  },
+  {
+    name: "AP Precalculus",
+    desc: "Key Concepts: Advanced algebraic skills, trigonometry, conic sections, polar coordinates, and sequences/series.\nTesting Practice: Regular in-class quizzes, comprehensive chapter tests, and full-length simulated AP Precalculus exams to assess understanding and test-taking skills.",
+  },
+  {
+    name: "AP Computer Science A",
+    desc: "Key Concepts: Java programming, object-oriented programming, data structures, and algorithms.\nTesting Practice: Coding assignments, code analysis exercises, and timed practice exams that include multiple-choice questions and coding tasks to prepare for both aspects of the AP CSA exam.",
+  },
+  {
+    name: "AP Biology",
+    desc: "Key Concepts: Cellular biology, genetics, evolution, ecology, and laboratory techniques.\nTesting Practice: Hands-on laboratory experiments, weekly quizzes, and simulated AP Biology exams with both multiple-choice and free-response questions, emphasizing data interpretation and experimental design.",
+  },
+  {
+    name: "AP Chemistry",
+    desc: "Key Concepts: Chemical reactions, stoichiometry, atomic structure, and thermodynamics.\nTesting Practice: Extensive laboratory work, problem-solving exercises, and timed practice tests covering both the multiple-choice and free-response sections of the AP Chemistry exam.",
+  },
+  {
+    name: "AP Lang and Comp",
+    desc: "Key Concepts: Rhetorical analysis, argumentation, synthesis, and effective writing.\nTesting Practice: Timed essay writing, analysis of various texts, and practice exams designed to simulate the AP Language and Composition exam's format and content.",
+  },
+  {
+    name: "AP Physics I, II, and C: Mech",
+    desc: "Key Concepts: Mechanics, electricity and magnetism, and fluid dynamics.\nTesting Practice: Extensive problem-solving exercises, hands-on experiments, and timed practice exams tailored to each specific AP Physics course, covering both multiple-choice and free-response sections.",
+  },
+  {
+    name: "AP Statistics",
+    desc: "Key Concepts: Statistical inference, probability, data analysis, and experimental design.\nTesting Practice: Data interpretation exercises, hypothesis testing, and practice exams closely resembling the format and content of the AP Statistics exam, including both multiple-choice and free-response questions.",
   },
 ];

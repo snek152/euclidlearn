@@ -61,10 +61,10 @@ export default function Home() {
       <section className="p-5">
         {/* <h1 className="font-dm text-4xl">What We Offer</h1> */}
         <div className="grid grid-cols-4 gap-5">
-          <CourseCard title="AP" href="/courses#ap" />
-          <CourseCard title="SAT/ACT" href="/courses#testprep" />
-          <CourseCard title="AIME/USACO" href="/courses#competition" />
-          <CourseCard title="Consulting" href="/consulting" />
+          <CourseCard title="AP" href="/services/ap" />
+          <CourseCard title="SAT/ACT" href="/services/testprep" />
+          <CourseCard title="AIME/USACO" href="/services/competition" />
+          <CourseCard title="Consulting" href="/services/consulting" />
         </div>
       </section>
       <HomeSection

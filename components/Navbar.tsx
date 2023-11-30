@@ -130,7 +130,7 @@ export default function Navbar() {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                  <Menu.Items className="absolute right-0 mt-3 w-36 origin-top-right rounded-lg bg-navy border-white divide-y divide-blue shadow-md focus:outline-none ">
+                  <Menu.Items className="absolute right-0 mt-3 w-40 origin-top-right rounded-lg bg-navy border-white divide-y divide-blue divide-opacity-30 shadow-md focus:outline-none ">
                     {link.subLinks?.map((subLink, j) => (
                       <Menu.Item key={j}>
                         {({ active }) => (

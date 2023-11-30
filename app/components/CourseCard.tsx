@@ -130,9 +130,13 @@ export default function CourseCard(props: CourseCardProps) {
         router.prefetch(props.href.split("#")[0]);
       }}
       onClick={() => {
-        router.push(props.href.split("#")[0]);
-        if (props.href.indexOf("#") != -1)
-          document.getElementById(props.href.split("#")[1])?.scrollIntoView();
+        router.push(props.href.split("#")[0], { scroll: true });
+        // if (props.href.indexOf("#") != -1)
+        console.log(props.href.split("#")[1]);
+        console.log(document.getElementById(props.href.split("#")[1]));
+        document
+          .getElementById(props.href.split("#")[1])
+          ?.scrollIntoView({ behavior: "smooth" });
       }}
     >
       <h1 className="font-dm text-2xl text-center">{props.title}</h1>

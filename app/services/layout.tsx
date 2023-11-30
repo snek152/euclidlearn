@@ -1,0 +1,48 @@
+"use client";
+
+import { LinkButton } from "@/components/Button";
+import SmallBanner from "@/components/SmallBanner";
+import { usePathname } from "next/navigation";
+
+const lookup: Record<string, string[]> = {
+  "/services/ap": [
+    "AP Tutoring",
+    "Advanced Placement Courses",
+    "Our comprehensive approach includes detailed instruction, regular assessment, and ample opportunities for hands-on practice and timed exams, ensuring that students are well-prepared to excel in their respective AP exams and gain a deep understanding of the subject matter.",
+  ],
+  "/services/testprep": ["SAT/ACT Prep", "Test Prep Courses"],
+  "/services/competition": ["Competition Prep", "STEM Competition Courses"],
+  "/services/consulting": ["Consulting", "Consulting Services"],
+};
+
+export default function Courses({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  return (
+    <>
+      <SmallBanner
+        title={pathname ? lookup[pathname][0] : "Courses"}
+        description="Your education experience starts here"
+        sideDescription={
+          lookup[pathname].length > 2
+            ? lookup[pathname][2]
+            : "We tailor to individual learning styles, providing personalized learning experiences to optimize comprehension and retention."
+        }
+      >
+        <LinkButton
+          className="bg-navy text-white px-5 py-1 text-lg"
+          hoverClass="bg-black bg-opacity-30 text-white"
+          href="/register"
+        >
+          Register Now
+        </LinkButton>
+      </SmallBanner>
+      <section>
+        <h1 className="text-center font-dm text-4xl">{lookup[pathname][1]}</h1>
+        <h2 className="text-center font-antic text-2xl pt-1">
+          click to learn more
+        </h2>
+        {children}
+      </section>
+    </>
+  );
+}

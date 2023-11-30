@@ -13,3 +13,8 @@ export type TeamMember = {
   bio: string;
   image: string;
 };
+
+export type Course = {
+  name: string;
+  desc: string;
+};
