@@ -13,19 +13,19 @@ export const navLinks: NavLink[] = [
     label: "Programs",
     subLinks: [
       {
-        href: "/services/ap",
+        href: "/services?service=ap",
         label: "AP Tutoring",
       },
       {
-        href: "/services/testprep",
+        href: "/services?service=testprep",
         label: "SAT/ACT Prep",
       },
       {
-        href: "/services/competition",
+        href: "/services?service=competition",
         label: "AIME/USACO Prep",
       },
       {
-        href: "/services/consulting",
+        href: "/services?service=consulting",
         label: "Consulting",
       },
     ],

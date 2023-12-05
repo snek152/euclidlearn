@@ -127,16 +127,17 @@ export default function CourseCard(props: CourseCardProps) {
     <button
       className="rounded-2xl bg-white bg-opacity-100 group border-transparent border shadow-sm flex flex-col relative p-4 justify-start items-center hover:border-black hover:border-opacity-50 transition-colors duration-500"
       onMouseEnter={() => {
-        router.prefetch(props.href.split("#")[0]);
+        // router.prefetch(props.href.split("#")[0]);
       }}
       onClick={() => {
-        router.push(props.href.split("#")[0], { scroll: true });
+        // router.prefetch(props.href.split("#")[0]);
+        router.push(props.href, { scroll: true });
         // if (props.href.indexOf("#") != -1)
-        console.log(props.href.split("#")[1]);
-        console.log(document.getElementById(props.href.split("#")[1]));
-        document
-          .getElementById(props.href.split("#")[1])
-          ?.scrollIntoView({ behavior: "smooth" });
+        // console.log(props.href.split("#")[1]);
+        // console.log(document.getElementById(props.href.split("#")[1]));
+        // document
+        //   .getElementById(props.href.split("#")[1])
+        //   ?.scrollIntoView({ behavior: "smooth" });
       }}
     >
       <h1 className="font-dm text-2xl text-center">{props.title}</h1>

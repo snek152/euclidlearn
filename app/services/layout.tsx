@@ -2,7 +2,8 @@
 
 import { LinkButton } from "@/components/Button";
 import SmallBanner from "@/components/SmallBanner";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 const lookup: Record<string, string[]> = {
   "/services/ap": [
@@ -15,17 +16,32 @@ const lookup: Record<string, string[]> = {
   "/services/consulting": ["Consulting", "Consulting Services"],
 };
 
-export default function Courses({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
+export default function Courses({
+  children,
+  ap,
+  testprep,
+}: {
+  children: React.ReactNode;
+  ap: React.ReactNode;
+  testprep: React.ReactNode;
+}) {
+  const query = useSearchParams();
+  const router = useRouter();
+  useEffect(() => {
+    if (query.get("service")) {
+      document
+        .getElementById(query.get("service")!)
+        ?.scrollIntoView({ behavior: "smooth" });
+      router.push("/services");
+    }
+  });
   return (
     <>
       <SmallBanner
-        title={pathname ? lookup[pathname][0] : "Courses"}
+        title={"Courses and Services"}
         description="Your education experience starts here"
         sideDescription={
-          lookup[pathname].length > 2
-            ? lookup[pathname][2]
-            : "We tailor to individual learning styles, providing personalized learning experiences to optimize comprehension and retention."
+          "We tailor to individual learning styles, providing personalized learning experiences to optimize comprehension and retention."
         }
       >
         <LinkButton
@@ -36,13 +52,8 @@ export default function Courses({ children }: { children: React.ReactNode }) {
           Register Now
         </LinkButton>
       </SmallBanner>
-      <section>
-        <h1 className="text-center font-dm text-4xl">{lookup[pathname][1]}</h1>
-        <h2 className="text-center font-antic text-2xl pt-1">
-          click to learn more
-        </h2>
-        {children}
-      </section>
+      {ap}
+      {testprep}
     </>
   );
 }

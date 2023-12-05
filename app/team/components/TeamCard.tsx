@@ -12,7 +12,7 @@ interface TeamCardProps {
 export default function TeamCard(props: TeamCardProps) {
   return (
     <div className="m-2">
-      <div className="bg-white relative rounded-xl gap-3 grid grid-cols-7 w-full px-5 py-3 shadow-sm border border-black border-opacity-5">
+      <div className="bg-white bg-opacity-50 backdrop-blur-md relative rounded-xl gap-3 grid grid-cols-7 w-full px-5 py-3 shadow-sm border border-black border-opacity-5">
         <Image
           src={props.image}
           alt={props.name}

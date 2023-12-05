@@ -1,3 +1,3 @@
 export default function Testprep() {
-  return <div>Hello</div>;
+  return <section>Hello</section>;
 }
