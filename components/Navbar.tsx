@@ -83,7 +83,7 @@ export default function Navbar() {
               <Menu key={i} as="div" className="relative">
                 <Menu.Button
                   className={`font-dekko text-xl group transition duration-300 ${
-                    link.subLinks?.find((val) => val.href == router) !=
+                    link.subLinks?.find((val) => val.href === router) !=
                     undefined
                       ? "text-lightblue"
                       : "text-white"

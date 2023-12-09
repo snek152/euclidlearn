@@ -16,31 +16,25 @@ const lookup: Record<string, string[]> = {
   "/services/consulting": ["Consulting", "Consulting Services"],
 };
 
-export default function Courses({
-  children,
-  ap,
-  testprep,
-}: {
-  children: React.ReactNode;
-  ap: React.ReactNode;
-  testprep: React.ReactNode;
-}) {
-  const query = useSearchParams();
-  const router = useRouter();
-  useEffect(() => {
-    if (query.get("service")) {
-      document
-        .getElementById(query.get("service")!)
-        ?.scrollIntoView({ behavior: "smooth" });
-      router.push("/services");
-    }
-  });
+export default function Courses({ children }: { children: React.ReactNode }) {
+  //   const query = useSearchParams();
+  //   const router = useRouter();
+  //   useEffect(() => {
+  //     if (query.get("service")) {
+  //       document
+  //         .getElementById(query.get("service")!)
+  //         ?.scrollIntoView({ behavior: "smooth" });
+  //       router.push("/services");
+  //     }
+  //   });
+  const pathname = usePathname();
   return (
     <>
       <SmallBanner
-        title={"Courses and Services"}
+        title={lookup[pathname][0] || "Courses and Services"}
         description="Your education experience starts here"
         sideDescription={
+          lookup[pathname][2] ||
           "We tailor to individual learning styles, providing personalized learning experiences to optimize comprehension and retention."
         }
       >
@@ -52,8 +46,10 @@ export default function Courses({
           Register Now
         </LinkButton>
       </SmallBanner>
-      {ap}
-      {testprep}
+      <section>
+        <h1 className="text-center font-dm text-4xl">{lookup[pathname][1]}</h1>
+        {children}
+      </section>
     </>
   );
 }

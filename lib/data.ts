@@ -13,19 +13,19 @@ export const navLinks: NavLink[] = [
     label: "Programs",
     subLinks: [
       {
-        href: "/services?service=ap",
+        href: "/services/ap",
         label: "AP Tutoring",
       },
       {
-        href: "/services?service=testprep",
+        href: "/services/testprep",
         label: "SAT/ACT Prep",
       },
       {
-        href: "/services?service=competition",
+        href: "/services/competition",
         label: "AIME/USACO Prep",
       },
       {
-        href: "/services?service=consulting",
+        href: "/services/consulting",
         label: "Consulting",
       },
     ],
@@ -106,5 +106,16 @@ export const apCourses: Course[] = [
   {
     name: "AP Statistics",
     desc: "Key Concepts: Statistical inference, probability, data analysis, and experimental design.\nTesting Practice: Data interpretation exercises, hypothesis testing, and practice exams closely resembling the format and content of the AP Statistics exam, including both multiple-choice and free-response questions.",
+  },
+];
+
+export const testprepCourses: Course[] = [
+  {
+    name: "CollegeBoard SAT",
+    desc: "Id labore occaecat magna ut. Aute fugiat id aliquip nulla occaecat ullamco eiusmod mollit consectetur elit nulla mollit. Cupidatat duis nostrud Lorem quis aute sint consequat aute nostrud consectetur irure aute. ",
+  },
+  {
+    name: "CollegeBoard ACT",
+    desc: "Id labore occaecat magna ut. Aute fugiat id aliquip nulla occaecat ullamco eiusmod mollit consectetur elit nulla mollit. Cupidatat duis nostrud Lorem quis aute sint consequat aute nostrud consectetur irure aute. ",
   },
 ];

@@ -72,12 +72,16 @@ export default function CourseModalButton({ course }: CourseModalButtonProps) {
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-lg font-antic text-gray-500">
-                      {course.desc.split("\n").map((d) => (
-                        <div key={d}>
-                          <span className="font-dm">{d.split(":")[0]}:</span>
-                          <span>{d.split(":")[1]}</span>
-                        </div>
-                      ))}
+                      {course.desc.split("\n").map((d) =>
+                        d.indexOf(":") === -1 ? (
+                          <div key={d}>{d}</div>
+                        ) : (
+                          <div key={d}>
+                            <span className="font-dm">{d.split(":")[0]}:</span>
+                            <span>{d.split(":")[1]}</span>
+                          </div>
+                        )
+                      )}
                     </p>
                   </div>
 

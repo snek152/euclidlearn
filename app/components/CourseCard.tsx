@@ -131,7 +131,7 @@ export default function CourseCard(props: CourseCardProps) {
       }}
       onClick={() => {
         // router.prefetch(props.href.split("#")[0]);
-        router.push(props.href, { scroll: true });
+        router.push(props.href);
         // if (props.href.indexOf("#") != -1)
         // console.log(props.href.split("#")[1]);
         // console.log(document.getElementById(props.href.split("#")[1]));
