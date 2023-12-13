@@ -2,10 +2,23 @@
 
 import { Course } from "@/lib/types";
 import { Dialog, Transition } from "@headlessui/react";
+import Link from "next/link";
 import { Fragment, useState } from "react";
 
 export interface CourseModalButtonProps {
   course: Course;
+}
+
+export function CourseLinkButton({ course }: CourseModalButtonProps) {
+  return (
+    <Link
+      className="border-2 bg-white bg-opacity-20 group font-dekko text-xl border-blue rounded-full py-2 relative z-0 grid place-items-center"
+      href={`/services/ap/${course.slug}`}
+    >
+      <span className="z-10 relative">{course.name}</span>
+      <span className="absolute group-hover:w-full transition-all top-0 left-0 group-hover:opacity-25 z-0 duration-200 bg-gradient-to-r from-white to-lightblue rounded-full h-full opacity-0 w-[0%]"></span>
+    </Link>
+  );
 }
 
 export default function CourseModalButton({ course }: CourseModalButtonProps) {

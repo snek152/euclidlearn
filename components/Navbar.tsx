@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, Popover, Transition } from "@headlessui/react";
+import { Disclosure, Menu, Popover, Transition } from "@headlessui/react";
 import Image from "next/image";
 import learn from "@/images/Learn.png";
 import { navLinks } from "@/lib/data";
@@ -81,38 +81,40 @@ export default function Navbar() {
               </Link>
             ) : (
               <Menu key={i} as="div" className="relative">
-                <Menu.Button
-                  className={`font-dekko text-xl group transition duration-300 ${
-                    link.subLinks?.find((val) => val.href === router) !=
-                    undefined
-                      ? "text-lightblue"
-                      : "text-white"
-                  }`}
-                >
-                  <span className="flex items-center gap-1">
-                    {link.label}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-5 h-5"
+                {({ close }) => (
+                  <>
+                    <Menu.Button
+                      className={`font-dekko text-xl group transition duration-300 ${
+                        link.subLinks?.find((val) => val.href === router) !=
+                        undefined
+                          ? "text-lightblue"
+                          : "text-white"
+                      }`}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                      <path
-                        className="group-hover:animate-wiggle origin-center"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5"
-                      />
-                    </svg>
-                  </span>
-                  {/* <span
+                      <span className="flex items-center gap-1">
+                        {link.label}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="w-5 h-5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                          <path
+                            className="group-hover:animate-wiggle origin-center"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5"
+                          />
+                        </svg>
+                      </span>
+                      {/* <span
                     className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-0.5 h-0.5 ${
                       link.subLinks?.find((val) => val.href == router) !=
                       undefined
@@ -120,42 +122,88 @@ export default function Navbar() {
                         : "text-white"
                     }`}
                   /> */}
-                </Menu.Button>
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-100"
-                  enterFrom="transform opacity-0 scale-95"
-                  enterTo="transform opacity-100 scale-100"
-                  leave="transition ease-in duration-75"
-                  leaveFrom="transform opacity-100 scale-100"
-                  leaveTo="transform opacity-0 scale-95"
-                >
-                  <Menu.Items className="absolute right-0 mt-3 w-40 origin-top-right rounded-lg bg-navy border-white divide-y divide-blue divide-opacity-30 shadow-md focus:outline-none ">
-                    {link.subLinks?.map((subLink, j) => (
-                      <Menu.Item key={j}>
-                        {({ active }) => (
-                          <Link
-                            href={subLink.href!}
-                            className={`${
-                              active ? "" : ""
-                            } font-dekko text-lg group flex flex-col w-auto py-1 px-3 text-white transition duration-300`}
-                          >
-                            <div className="py-0.5 inline-flex flex-col w-min whitespace-nowrap">
-                              {subLink.label}
-                              <span
-                                className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-1 h-0.5 ${
-                                  router === link.href
-                                    ? "bg-lightblue"
-                                    : "bg-white"
-                                }`}
-                              />
-                            </div>
-                          </Link>
+                    </Menu.Button>
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-100"
+                      enterFrom="transform opacity-0 scale-95"
+                      enterTo="transform opacity-100 scale-100"
+                      leave="transition ease-in duration-75"
+                      leaveFrom="transform opacity-100 scale-100"
+                      leaveTo="transform opacity-0 scale-95"
+                    >
+                      <Menu.Items className="absolute right-0 mt-3 w-56 origin-top-right rounded-lg bg-navy border-white divide-y divide-blue divide-opacity-30 shadow-md focus:outline-none ">
+                        {link.subLinks?.map((subLink, j) =>
+                          subLink.subLinks ? (
+                            <Disclosure key={j} as="div">
+                              <Disclosure.Button className="font-dekko text-lg group flex flex-col w-auto pb-1 px-3 text-white pt-1.5">
+                                {subLink.label}
+                              </Disclosure.Button>
+                              <Transition
+                                enter="transition duration-200 origin-top ease-out"
+                                enterFrom="transform scale-y-50 opacity-0"
+                                enterTo="transform scale-y-100 opacity-100"
+                                leave="transition duration-200 origin-top ease-out"
+                                leaveFrom="transform scale-y-100 opacity-100"
+                                leaveTo="transform scale-y-50 opacity-0"
+                              >
+                                <Disclosure.Panel>
+                                  <div className="flex flex-col -mt-1 gap-1">
+                                    {subLink.subLinks.map((subSubLink, k) => (
+                                      <Link
+                                        href={subSubLink.href!}
+                                        key={k}
+                                        className={`${
+                                          router === subSubLink.href
+                                            ? "text-lightblue"
+                                            : "text-white"
+                                        } font-dekko text-lg group flex flex-col w-auto px-3 transition duration-300`}
+                                        onClick={() => close()}
+                                      >
+                                        <div className="py-0.5 inline-flex flex-col w-min whitespace-nowrap pl-3">
+                                          {subSubLink.label}
+                                          <span
+                                            className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-1 h-0.5 ${
+                                              router === subSubLink.href
+                                                ? "bg-lightblue"
+                                                : "bg-white"
+                                            }`}
+                                          />
+                                        </div>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </Disclosure.Panel>
+                              </Transition>
+                            </Disclosure>
+                          ) : (
+                            <Menu.Item key={j}>
+                              {({ active }) => (
+                                <Link
+                                  href={subLink.href!}
+                                  className={`${
+                                    active ? "" : ""
+                                  } font-dekko text-lg group flex flex-col w-auto py-1 px-3 text-white transition duration-300`}
+                                >
+                                  <div className="py-0.5 inline-flex flex-col w-min whitespace-nowrap">
+                                    {subLink.label}
+                                    <span
+                                      className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-1 h-0.5 ${
+                                        router === link.href
+                                          ? "bg-lightblue"
+                                          : "bg-white"
+                                      }`}
+                                    />
+                                  </div>
+                                </Link>
+                              )}
+                            </Menu.Item>
+                          )
                         )}
-                      </Menu.Item>
-                    ))}
-                  </Menu.Items>
-                </Transition>
+                      </Menu.Items>
+                    </Transition>
+                  </>
+                )}
               </Menu>
             )
           )}

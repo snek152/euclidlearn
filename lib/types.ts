@@ -17,4 +17,5 @@ export type TeamMember = {
 export type Course = {
   name: string;
   desc: string;
+  slug: string;
 };
