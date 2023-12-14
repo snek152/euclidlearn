@@ -10,7 +10,7 @@ export default function Footer() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </h1>
-        <div className="flex gap-2 w-full justify-end">
+        {/* <div className="flex gap-2 w-full justify-end">
           {navLinks.map((link, i) =>
             link.href ? (
               <Link
@@ -40,7 +40,7 @@ export default function Footer() {
               </Fragment>
             )
           )}
-        </div>
+        </div> */}
       </div>
       <p className="text-center pt-3 text-lg font-antic">
         © 2023 by EuclidLearn. All Rights Reserved.

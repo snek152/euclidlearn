@@ -69,8 +69,8 @@ export default function Home() {
       </section>
       <HomeSection
         title="Redefining the Learning Experience"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        imageSrc={trusted}
+        description="With cutting-edge strategies and innovative techniques, our students consistently exceed benchmarks, employing personalized plans and continuous assessment to align with individual learning styles and identify areas for growth, all while seamlessly integrating technology to elevate the learning experience."
+        imageSrc={mentor}
       />
       {/* <HomeSection
         title="Trusted by Top Institutions"
@@ -80,14 +80,14 @@ export default function Home() {
       /> */}
       <HomeSection
         title="Delivering Results within Days"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        imageSrc={results}
+        description="At our institution, students thrive through significant academic, extracurricular, and personal advancements, guided by our accomplished mentors who provide precise guidance for impactful results, all achieved in a remarkably short period of time"
+        imageSrc={trusted}
         reverse
       />
       <HomeSection
         title="24/7 Access to Private Mentors"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        imageSrc={mentor}
+        description="Our mentors are available round-the-clock to provide support across all subjects. We firmly believe continuous mentorship significantly accelerates progress, ensuring unparalleled advancement for our students."
+        imageSrc={results}
       />
       <section className="p-5">
         <h1 className="font-dm text-4xl">Why Us</h1>

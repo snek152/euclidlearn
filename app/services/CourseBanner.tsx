@@ -39,7 +39,7 @@ export default function CourseBanner(props: CourseBannerProps) {
       </Link>
       <div className="z-10 flex flex-col items-center h-full gap-3 w-[95%] justify-center p-5">
         <h1 className="font-dm w-full text-5xl text-center">{props.title}</h1>
-        <h2 className="font-antic text-2xl text-center max-w-[50ch]">
+        <h2 className="font-antic text-xl text-center max-w-[50ch]">
           {props.description}
         </h2>
         {/* <div className="flex gap-3">{props.children}</div> */}

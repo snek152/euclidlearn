@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <Popover
       as="nav"
-      className="rounded-full w-[calc(100vw-0.5rem)] m-1 bg-navy shadow-sm pl-3 text-white flex justify-between items-center fixed z-50"
+      className="rounded-full left-1 right-1 my-1 bg-navy shadow-sm pl-3 text-white flex justify-between items-center fixed z-50"
     >
       <h1 className="font-dm text-2xl inline-flex">
         <Image
@@ -85,8 +85,11 @@ export default function Navbar() {
                   <>
                     <Menu.Button
                       className={`font-dekko text-xl group transition duration-300 ${
-                        link.subLinks?.find((val) => val.href === router) !=
-                        undefined
+                        link.subLinks?.find(
+                          (val) =>
+                            val.href === router ||
+                            router.indexOf(val.href!) != -1
+                        ) != undefined
                           ? "text-lightblue"
                           : "text-white"
                       }`}
@@ -136,7 +139,16 @@ export default function Navbar() {
                         {link.subLinks?.map((subLink, j) =>
                           subLink.subLinks ? (
                             <Disclosure key={j} as="div">
-                              <Disclosure.Button className="font-dekko text-lg group flex flex-col w-auto pb-1 px-3 text-white pt-1.5">
+                              <Disclosure.Button
+                                className={`font-dekko text-lg group flex flex-col w-auto pb-1 px-3 ${
+                                  router === subLink.href ||
+                                  subLink.subLinks?.find(
+                                    (val) => val.href === router
+                                  ) != undefined
+                                    ? "text-lightblue"
+                                    : "text-white"
+                                } pt-1.5`}
+                              >
                                 {subLink.label}
                               </Disclosure.Button>
                               <Transition
@@ -178,12 +190,17 @@ export default function Navbar() {
                             </Disclosure>
                           ) : (
                             <Menu.Item key={j}>
-                              {({ active }) => (
+                              {() => (
                                 <Link
                                   href={subLink.href!}
                                   className={`${
-                                    active ? "" : ""
-                                  } font-dekko text-lg group flex flex-col w-auto py-1 px-3 text-white transition duration-300`}
+                                    router === subLink.href ||
+                                    subLink.subLinks?.find(
+                                      (val) => val.href === router
+                                    ) != undefined
+                                      ? "text-lightblue"
+                                      : "text-white"
+                                  } font-dekko text-lg group flex flex-col w-auto py-1 px-3 transition duration-300`}
                                 >
                                   <div className="py-0.5 inline-flex flex-col w-min whitespace-nowrap">
                                     {subLink.label}

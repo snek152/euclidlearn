@@ -84,7 +84,7 @@ export default function CourseModalButton({ course }: CourseModalButtonProps) {
                     </button>
                   </Dialog.Title>
                   <div className="mt-2">
-                    <p className="text-lg font-antic text-gray-500">
+                    <div className="text-lg font-antic text-gray-500">
                       {course.desc.split("\n").map((d) =>
                         d.indexOf(":") === -1 ? (
                           <div key={d}>{d}</div>
@@ -95,7 +95,7 @@ export default function CourseModalButton({ course }: CourseModalButtonProps) {
                           </div>
                         )
                       )}
-                    </p>
+                    </div>
                   </div>
 
                   {/* <div>

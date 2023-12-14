@@ -42,7 +42,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${dm.variable} ${antic.variable} ${dekko.variable}`}>
         <Navbar />
-        {children}
+        <div>{children}</div>
         <Footer />
       </body>
     </html>
