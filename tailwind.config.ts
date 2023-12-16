@@ -36,9 +36,14 @@ const config: Config = {
           // "75%": { transform: "translateX(-2rem)" },
           // "100%": { transform: "translateX(0px)" },
         },
+        bg: {
+          "0%, 100%": { backgroundPosition: "0 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
         wiggle: "wiggle 0.75s ease-in-out infinite",
+        bg: "bg 10s ease-in-out infinite",
         // wave: "wave 5s ease-in-out infinite",
       },
     },

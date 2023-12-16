@@ -1,6 +1,6 @@
 import { apCourses } from "@/lib/data";
-import { CourseLinkButton } from "./CourseModalButton";
-import CourseCard from "./CourseCard";
+import { CourseLinkButton } from "../CourseModalButton";
+import CourseCard from "../CourseCard";
 
 export default function AP() {
   return (

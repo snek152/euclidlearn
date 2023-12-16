@@ -5,6 +5,8 @@ import Link from "next/link";
 export interface CourseBannerProps {
   title: string;
   description: string;
+  backTo: string;
+  backToHref: string;
   //   children: React.ReactNode;
   //   sideDescription?: string;
 }
@@ -13,11 +15,11 @@ export default function CourseBanner(props: CourseBannerProps) {
   return (
     <section className="bg-blue/60 h-48 pt-40 px-7 mb-10 relative flex items-center justify-center">
       <Link
-        href="/services"
+        href={props.backToHref}
         className="left-2 top-14 group transition duration-300 z-10 absolute text-xl font-dekko"
       >
         <div className="flex gap-1 items-center justify-center">
-          Back to Services
+          Back to {props.backTo}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

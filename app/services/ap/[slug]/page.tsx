@@ -6,7 +6,12 @@ export default function APpage({ params }: { params: { slug: string } }) {
   const course = apCourses.find((course) => course.slug === params.slug)!;
   return (
     <div>
-      <CourseBanner title={course?.name} description={course.desc} />
+      <CourseBanner
+        title={course?.name}
+        description={course.desc}
+        backTo="AP Courses"
+        backToHref="/services/ap"
+      />
       {course ? <CourseCard course={course} /> : <div>Course not found</div>}
     </div>
   );

@@ -12,5 +12,5 @@ body {
 }
 
 section {
-  @apply relative;
+  @apply relative z-10;
 }

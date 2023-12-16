@@ -8,6 +8,7 @@ import trusted from "@/images/trusted.png";
 import mentor from "@/images/mentor.png";
 import results from "@/images/results.png";
 import CourseCard from "./components/CourseCard";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
@@ -168,7 +169,7 @@ export default function Home() {
           ))}
         </div>
       </section> */}
-      <section className="p-5">
+      {/* <section className="p-5 z-20">
         <h1 className="font-dm text-4xl">Pricing</h1>
         <div className="flex p-5">
           <div className="w-[25%] flex flex-col items-center">
@@ -176,7 +177,8 @@ export default function Home() {
             <h2 className="font-antic text-3xl">per session</h2>
           </div>
         </div>
-      </section>
+      </section> */}
+      <Testimonials />
     </>
   );
 }
