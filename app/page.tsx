@@ -15,10 +15,10 @@ export default function Home() {
     <>
       <section className="bg-blue/60 h-80 pt-20 mb-10 relative flex justify-center">
         <div className="z-10 flex flex-col h-full gap-3 w-[95%] justify-center p-5">
-          <h1 className="font-dm text-5xl">
+          <h1 className="font-dm text-3xl md:text-5xl">
             Student Oriented Academic Coaching
           </h1>
-          <h2 className="font-antic text-2xl max-w-[50ch]">
+          <h2 className="font-antic text-lg md:text-2xl max-w-[50ch]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </h2>
@@ -61,11 +61,11 @@ export default function Home() {
       </section>
       <section className="p-5">
         {/* <h1 className="font-dm text-4xl">What We Offer</h1> */}
-        <div className="grid grid-cols-4 gap-5">
-          <CourseCard title="AP" href="/services?service=ap" />
-          <CourseCard title="SAT/ACT" href="/services?service=testprep" />
-          <CourseCard title="AIME/USACO" href="/services?service=competition" />
-          <CourseCard title="Consulting" href="/services?service=consulting" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <CourseCard title="AP" href="/services/ap" />
+          <CourseCard title="SAT/ACT" href="/services/testprep" />
+          <CourseCard title="AIME/USACO" href="/services/competition" />
+          <CourseCard title="Consulting" href="/services/consulting" />
         </div>
       </section>
       <HomeSection
@@ -92,7 +92,7 @@ export default function Home() {
       />
       <section className="p-5">
         <h1 className="font-dm text-4xl">Why Us</h1>
-        <div className="grid grid-cols-3 gap-5 py-4">
+        <div className="grid md:grid-cols-3 gap-5 py-4">
           <CourseFormatCard
             icon={
               <svg

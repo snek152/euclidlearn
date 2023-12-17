@@ -5,15 +5,15 @@ import SmallBanner from "@/components/SmallBanner";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ReactNode, useEffect } from "react";
 
-const lookup: Record<string, string[]> = {
-  "/services/ap": [
-    "AP Tutoring",
-    "Our comprehensive approach includes detailed instruction, regular assessment, and ample opportunities for hands-on practice and timed exams, ensuring that students are well-prepared to excel in their respective AP exams and gain a deep understanding of the subject matter.",
-  ],
-  "/services/testprep": ["SAT/ACT Prep", "Test Prep Courses"],
-  "/services/competition": ["Competition Prep", "STEM Competition Courses"],
-  "/services/consulting": ["Consulting", "Consulting Services"],
-};
+// const lookup: Record<string, string[]> = {
+//   "/services/ap": [
+//     "AP Tutoring",
+//     "Our comprehensive approach includes detailed instruction, regular assessment, and ample opportunities for hands-on practice and timed exams, ensuring that students are well-prepared to excel in their respective AP exams and gain a deep understanding of the subject matter.",
+//   ],
+//   "/services/testprep": ["SAT/ACT Prep", "Test Prep Courses"],
+//   "/services/competition": ["Competition Prep", "STEM Competition Courses"],
+//   "/services/consulting": ["Consulting", "Consulting Services"],
+// };
 
 export default function Courses({ children }: { children: ReactNode }) {
   const pathname = usePathname();

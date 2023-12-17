@@ -16,7 +16,7 @@ export default function Navbar() {
       as="nav"
       className="rounded-full left-1 right-1 my-1 bg-navy shadow-sm pl-3 text-white flex justify-between items-center fixed z-50"
     >
-      <h1 className="font-dm text-2xl inline-flex">
+      <h1 className="font-dm md:py-0 py-1 text-xl md:text-2xl inline-flex">
         <Image
           src={learn}
           height={30}
@@ -172,7 +172,8 @@ export default function Navbar() {
                         // ) : (
                         <div key={j}>
                           {/* {() => ( */}
-                          <Link
+                          <Popover.Button
+                            as={Link}
                             href={subLink.href!}
                             className={`${
                               router === subLink.href
@@ -183,7 +184,7 @@ export default function Navbar() {
                             <div className="inline-flex flex-col w-min whitespace-nowrap">
                               {subLink.label}
                             </div>
-                          </Link>
+                          </Popover.Button>
                           {/* )} */}
                         </div>
                       ))}

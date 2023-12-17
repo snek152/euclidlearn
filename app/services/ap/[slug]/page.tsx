@@ -5,15 +5,17 @@ import CourseBanner from "../../CourseBanner";
 export default function APpage({ params }: { params: { slug: string } }) {
   const course = apCourses.find((course) => course.slug === params.slug)!;
   return (
-    <div>
+    <section>
       <CourseBanner
         title={course?.name}
         description={course.desc}
         backTo="AP Courses"
         backToHref="/services/ap"
       />
-      {course ? <CourseCard course={course} /> : <div>Course not found</div>}
-    </div>
+      <section className="">
+        <h1 className="font-dm text-4xl text-center">Course Curriculum</h1>
+      </section>
+    </section>
   );
 }
 

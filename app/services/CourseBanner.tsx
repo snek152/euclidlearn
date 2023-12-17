@@ -1,6 +1,7 @@
 import Image from "next/image";
 import bg from "@/images/background.svg";
 import Link from "next/link";
+import { LinkButton } from "@/components/Button";
 
 export interface CourseBannerProps {
   title: string;
@@ -13,7 +14,7 @@ export interface CourseBannerProps {
 
 export default function CourseBanner(props: CourseBannerProps) {
   return (
-    <section className="bg-blue/60 h-48 pt-40 px-7 mb-10 relative flex items-center justify-center">
+    <section className="bg-blue/60 h-48 pt-48 px-7 mb-40 relative flex items-center justify-center">
       <Link
         href={props.backToHref}
         className="left-2 top-14 group transition duration-300 z-10 absolute text-xl font-dekko"
@@ -44,7 +45,15 @@ export default function CourseBanner(props: CourseBannerProps) {
         <h2 className="font-antic text-xl text-center max-w-[50ch]">
           {props.description}
         </h2>
-        {/* <div className="flex gap-3">{props.children}</div> */}
+        <div className="flex gap-3">
+          <LinkButton
+            className="px-6 py-1 bg-navy text-white text-lg"
+            href="/register"
+            hoverClass="bg-black bg-opacity-20 text-white"
+          >
+            Register
+          </LinkButton>
+        </div>
       </div>
       <svg
         className="absolute top-48 z-0"

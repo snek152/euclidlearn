@@ -16,7 +16,7 @@ export function CourseLinkButton({ course }: CourseModalButtonProps) {
       href={`/services/ap/${course.slug}`}
     >
       <span className="z-10 relative">{course.name}</span>
-      <span className="absolute group-hover:w-full transition-all top-0 left-0 group-hover:opacity-25 z-0 duration-200 bg-gradient-to-r from-white to-lightblue rounded-full h-full opacity-0 w-[0%]"></span>
+      <span className="absolute md:group-hover:w-full transition-all top-0 left-0 md:group-hover:opacity-25 z-0 duration-200 bg-gradient-to-r from-white to-lightblue rounded-full h-full w-full opacity-25 md:opacity-0 md:w-[0%]"></span>
     </Link>
   );
 }

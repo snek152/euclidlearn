@@ -10,16 +10,16 @@ export interface SmallBannerProps {
 
 export default function SmallBanner(props: SmallBannerProps) {
   return (
-    <section className="bg-blue/60 h-72 pt-14 px-7 mb-10 relative flex items-center justify-center">
-      <div className="z-10 flex flex-col h-full gap-3 w-[95%] justify-center p-5">
-        <h1 className="font-dm text-5xl">{props.title}</h1>
-        <h2 className="font-antic text-2xl max-w-[50ch]">
+    <section className="bg-blue/60 h-72 pt-16 md:pt-14 px-2 md:px-7 mb-10 relative flex flex-col md:flex-row items-center justify-center">
+      <div className="z-10 flex flex-col h-full md:gap-3 w-[95%] justify-center md:p-5">
+        <h1 className="font-dm text-3xl md:text-5xl">{props.title}</h1>
+        <h2 className="font-antic text-xl pb-2 md:pb-0 md:text-2xl max-w-[50ch]">
           {props.description}
         </h2>
         <div className="flex gap-3">{props.children}</div>
       </div>
       {props.sideDescription && (
-        <p className="z-10 font-antic text-xl text-center">
+        <p className="z-10 font-antic text-base md:text-xl pl-3 pt-2 md:p-0 md:text-center">
           {props.sideDescription}
         </p>
       )}

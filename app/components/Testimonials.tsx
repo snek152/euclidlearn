@@ -52,10 +52,10 @@ const Testimonial = (props: {
   content: string;
 }) => {
   return (
-    <div className="bg-lightblue backdrop-blur-sm bg-opacity-10 py-5 w-[calc(100%-2*44px)] px-10 h-full rounded-xl mx-auto z-20">
-      <p className="font-antic text-2xl">{props.content}</p>
-      <h1 className="font-dm text-2xl">{props.name}</h1>
-      <h2 className="font-dekko text-2xl">{props.title}</h2>
+    <div className="bg-lightblue backdrop-blur-sm bg-opacity-10 py-5 w-full md:w-[calc(100%-2*44px)] px-10 h-full rounded-xl mx-auto z-20">
+      <p className="font-antic text-lg md:text-2xl">{props.content}</p>
+      <h1 className="font-dm text-lg md:text-2xl">{props.name}</h1>
+      <h2 className="font-dekko text-lg md:text-2xl">{props.title}</h2>
     </div>
   );
 };
@@ -64,7 +64,7 @@ export default function Testimonials() {
   return (
     <div className="relative mb-10">
       <svg
-        className="absolute w-full -top-[7vw] z-0 rotate-180"
+        className="absolute w-full md:min-w-0 -top-[7vw] z-0 rotate-180"
         viewBox="0 0 1440 490"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,15 @@ export default function Testimonials() {
         dotColorInactive="#8B8C89"
         arrowLeft={<ArrowButton side="left" />}
         arrowRight={<ArrowButton side="right" />}
+        mobileBreakpoint={0}
       >
+        <Carousel.Item>
+          <Testimonial
+            name="Snehil Kakani"
+            title="Web Developer"
+            content="Duis qui quis ad non. Aliqua sit qui magna aute officia dolor consectetur sit culpa dolor mollit duis labore velit. Ut ad anim minim mollit voluptate culpa elit incididunt. Labore fugiat aliqua dolore magna nulla incididunt aute aute. Sint qui magna adipisicing magna fugiat."
+          />
+        </Carousel.Item>
         <Carousel.Item>
           <Testimonial
             name="Snehil Kakani"

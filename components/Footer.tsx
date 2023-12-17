@@ -4,7 +4,7 @@ import { Fragment } from "react";
 
 export default function Footer() {
   return (
-    <div className="bg-navy rounded-2xl relative m-2 px-5 py-3 shadow-sm text-white">
+    <section className="bg-navy rounded-2xl m-2 px-5 py-3 shadow-sm text-white">
       <div className="flex justify-between">
         <h1 className="font-dm text-xl w-full">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -45,6 +45,6 @@ export default function Footer() {
       <p className="text-center pt-3 text-lg font-antic">
         © 2023 by EuclidLearn. All Rights Reserved.
       </p>
-    </div>
+    </section>
   );
 }
