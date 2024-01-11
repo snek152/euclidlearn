@@ -1,8 +1,9 @@
-import { apCourses } from "@/lib/data";
+import { apCourses, testprepCourses } from "@/lib/data";
 import { CourseLinkButton } from "../CourseModalButton";
 import CourseCard from "../CourseCard";
 import SmallBanner from "@/components/SmallBanner";
 import { LinkButton } from "@/components/Button";
+import CourseLogistics from "../CourseLogistics";
 
 export default function AP() {
   return (
@@ -31,6 +32,9 @@ export default function AP() {
             <CourseLinkButton course={course} key={i} />
           ))}
         </div>
+      </section>
+      <section className="p-5">
+        <CourseLogistics {...testprepCourses[0].logistics} />
       </section>
     </>
   );

@@ -9,6 +9,7 @@ import mentor from "@/images/mentor.png";
 import results from "@/images/results.png";
 import CourseCard from "./components/CourseCard";
 import Testimonials from "./components/Testimonials";
+import FAQ from "./components/FAQ";
 
 export default function Home() {
   return (
@@ -19,8 +20,7 @@ export default function Home() {
             Student Oriented Academic Coaching
           </h1>
           <h2 className="font-antic text-lg md:text-2xl max-w-[50ch]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Providing Guidance, One Student at a Time
           </h2>
           <div className="flex gap-3">
             <LinkButton
@@ -179,6 +179,7 @@ export default function Home() {
         </div>
       </section> */}
       <Testimonials />
+      <FAQ />
     </>
   );
 }

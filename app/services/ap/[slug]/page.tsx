@@ -12,8 +12,18 @@ export default function APpage({ params }: { params: { slug: string } }) {
         backTo="AP Courses"
         backToHref="/services/ap"
       />
-      <section className="">
+      <section className="p-5">
         <h1 className="font-dm text-4xl text-center">Course Curriculum</h1>
+        {course.curriculum.map((unit, i) => (
+          // <div className="p-5" key={i}>
+          //   <h1 className="font-dm text-3xl">{unit}</h1>
+          <CourseCard
+            key={i}
+            name={`Week ${i + 1}: ${unit}`}
+            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed"
+          />
+          // </div>
+        ))}
       </section>
     </section>
   );

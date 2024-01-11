@@ -7,10 +7,9 @@ export default function Footer() {
     <section className="bg-navy rounded-2xl m-2 px-5 py-3 shadow-sm text-white">
       <div className="flex justify-between">
         <h1 className="font-dm text-xl w-full">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Providing Guidance, One Student at a Time
         </h1>
-        {/* <div className="flex gap-2 w-full justify-end">
+        <div className="flex gap-3 w-full justify-end">
           {navLinks.map((link, i) =>
             link.href ? (
               <Link
@@ -40,7 +39,7 @@ export default function Footer() {
               </Fragment>
             )
           )}
-        </div> */}
+        </div>
       </div>
       <p className="text-center pt-3 text-lg font-antic">
         © 2023 by EuclidLearn. All Rights Reserved.

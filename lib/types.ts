@@ -18,4 +18,5 @@ export type Course = {
   name: string;
   desc: string;
   slug: string;
+  curriculum: string[];
 };
