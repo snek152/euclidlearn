@@ -6,8 +6,8 @@ import { LinkButton } from "@/components/Button";
 export interface CourseBannerProps {
   title: string;
   description: string;
-  backTo: string;
-  backToHref: string;
+  backTo?: string;
+  backToHref?: string;
   //   children: React.ReactNode;
   //   sideDescription?: string;
 }
@@ -15,31 +15,35 @@ export interface CourseBannerProps {
 export default function CourseBanner(props: CourseBannerProps) {
   return (
     <section className="bg-blue/60 h-48 pt-48 px-7 mb-40 relative flex items-center justify-center">
-      <Link
-        href={props.backToHref}
-        className="left-2 top-14 group transition duration-300 z-10 absolute text-xl font-dekko"
-      >
-        <div className="flex gap-1 items-center justify-center">
-          Back to {props.backTo}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2.5}
-            stroke="currentColor"
-            className="w-4 h-4"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
-            />
-          </svg>
-        </div>
-        <span
-          className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-0.5 h-0.5 bg-black`}
-        />
-      </Link>
+      {props.backTo && props.backToHref ? (
+        <Link
+          href={props.backToHref}
+          className="left-2 top-14 group transition duration-300 z-10 absolute text-xl font-dekko"
+        >
+          <div className="flex gap-1 items-center justify-center">
+            Back to {props.backTo}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2.5}
+              stroke="currentColor"
+              className="w-4 h-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
+              />
+            </svg>
+          </div>
+          <span
+            className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-0.5 h-0.5 bg-black`}
+          />
+        </Link>
+      ) : (
+        <></>
+      )}
       <div className="z-10 flex flex-col items-center h-full gap-3 w-[95%] justify-center p-5">
         <h1 className="font-dm w-full text-5xl text-center">{props.title}</h1>
         <h2 className="font-antic text-xl text-center max-w-[50ch]">

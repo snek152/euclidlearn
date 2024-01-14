@@ -123,71 +123,72 @@ export default function Navbar() {
                   /> */}
                     </Disclosure.Button>
                     <Disclosure.Panel className="divide-y divide-blue divide-opacity-30 focus:outline-none">
-                      {link.subLinks?.map((subLink, j) => (
-                        // subLink.subLinks ? (
-                        //   <Disclosure key={j} as="div">
-                        //     <Disclosure.Button
-                        //       className={`font-dekko text-lg group flex flex-col w-auto pb-1 pl-2 ${
-                        //         router === subLink.href ||
-                        //         subLink.subLinks?.find(
-                        //           (val) => val.href === router
-                        //         ) != undefined
-                        //           ? "text-lightblue"
-                        //           : "text-white"
-                        //       } pt-1.5`}
-                        //     >
-                        //       {subLink.label}
-                        //     </Disclosure.Button>
-                        //     <Transition
-                        //       enter="transition duration-200 origin-top ease-out"
-                        //       enterFrom="transform scale-y-50 opacity-0"
-                        //       enterTo="transform scale-y-100 opacity-100"
-                        //       leave="transition duration-200 origin-top ease-out"
-                        //       leaveFrom="transform scale-y-100 opacity-100"
-                        //       leaveTo="transform scale-y-50 opacity-0"
-                        //     >
-                        //       <Disclosure.Panel>
-                        //         <div className="flex flex-col -mt-1 gap-1">
-                        //           {subLink.subLinks.map((subSubLink, k) => (
-                        //             <Popover.Button
-                        //               as={Link}
-                        //               href={subSubLink.href!}
-                        //               key={k}
-                        //               className={`${
-                        //                 router === subSubLink.href
-                        //                   ? "text-lightblue"
-                        //                   : "text-white"
-                        //               } font-dekko text-lg group flex flex-col w-auto px-3 transition duration-300`}
-                        //               onClick={() => close()}
-                        //             >
-                        //               <div className="py-0.5 inline-flex flex-col w-min whitespace-nowrap pl-3">
-                        //                 {subSubLink.label}
-                        //               </div>
-                        //             </Popover.Button>
-                        //           ))}
-                        //         </div>
-                        //       </Disclosure.Panel>
-                        //     </Transition>
-                        //   </Disclosure>
-                        // ) : (
-                        <div key={j}>
-                          {/* {() => ( */}
-                          <Popover.Button
-                            as={Link}
-                            href={subLink.href!}
-                            className={`${
-                              router === subLink.href
-                                ? "text-lightblue"
-                                : "text-white"
-                            } font-dekko text-lg flex flex-col w-auto py-0.5 pl-2 transition duration-300`}
-                          >
-                            <div className="inline-flex flex-col w-min whitespace-nowrap">
+                      {link.subLinks?.map((subLink, j) =>
+                        subLink.subLinks ? (
+                          <Disclosure key={j} as="div">
+                            <Disclosure.Button
+                              className={`font-dekko text-lg group flex flex-col w-auto pb-1 pl-2 ${
+                                router === subLink.href ||
+                                subLink.subLinks?.find(
+                                  (val) => val.href === router
+                                ) != undefined
+                                  ? "text-lightblue"
+                                  : "text-white"
+                              } pt-1.5`}
+                            >
                               {subLink.label}
-                            </div>
-                          </Popover.Button>
-                          {/* )} */}
-                        </div>
-                      ))}
+                            </Disclosure.Button>
+                            <Transition
+                              enter="transition duration-200 origin-top ease-out"
+                              enterFrom="transform scale-y-50 opacity-0"
+                              enterTo="transform scale-y-100 opacity-100"
+                              leave="transition duration-200 origin-top ease-out"
+                              leaveFrom="transform scale-y-100 opacity-100"
+                              leaveTo="transform scale-y-50 opacity-0"
+                            >
+                              <Disclosure.Panel>
+                                <div className="flex flex-col -mt-1 gap-1">
+                                  {subLink.subLinks.map((subSubLink, k) => (
+                                    <Popover.Button
+                                      as={Link}
+                                      href={subSubLink.href!}
+                                      key={k}
+                                      className={`${
+                                        router === subSubLink.href
+                                          ? "text-lightblue"
+                                          : "text-white"
+                                      } font-dekko text-lg group flex flex-col w-auto px-3 transition duration-300`}
+                                      onClick={() => close()}
+                                    >
+                                      <div className="py-0.5 inline-flex flex-col w-min whitespace-nowrap pl-3">
+                                        {subSubLink.label}
+                                      </div>
+                                    </Popover.Button>
+                                  ))}
+                                </div>
+                              </Disclosure.Panel>
+                            </Transition>
+                          </Disclosure>
+                        ) : (
+                          <div key={j}>
+                            {/* {() => ( */}
+                            <Popover.Button
+                              as={Link}
+                              href={subLink.href!}
+                              className={`${
+                                router === subLink.href
+                                  ? "text-lightblue"
+                                  : "text-white"
+                              } font-dekko text-lg flex flex-col w-auto py-0.5 pl-2 transition duration-300`}
+                            >
+                              <div className="inline-flex flex-col w-min whitespace-nowrap">
+                                {subLink.label}
+                              </div>
+                            </Popover.Button>
+                            {/* )} */}
+                          </div>
+                        )
+                      )}
                     </Disclosure.Panel>
                   </>
                 )}
@@ -268,87 +269,88 @@ export default function Navbar() {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="absolute right-0 mt-3 w-56 origin-top-right rounded-lg bg-navy border-white divide-y divide-blue divide-opacity-30 shadow-md focus:outline-none ">
-                        {link.subLinks?.map((subLink, j) => (
-                          // subLink.subLinks ? (
-                          //   <Disclosure key={j} as="div">
-                          //     <Disclosure.Button
-                          //       className={`font-dekko text-lg group flex flex-col w-auto pb-1 px-3 ${
-                          //         router === subLink.href ||
-                          //         subLink.subLinks?.find(
-                          //           (val) => val.href === router
-                          //         ) != undefined
-                          //           ? "text-lightblue"
-                          //           : "text-white"
-                          //       } pt-1.5`}
-                          //     >
-                          //       {subLink.label}
-                          //     </Disclosure.Button>
-                          //     <Transition
-                          //       enter="transition duration-200 origin-top ease-out"
-                          //       enterFrom="transform scale-y-50 opacity-0"
-                          //       enterTo="transform scale-y-100 opacity-100"
-                          //       leave="transition duration-200 origin-top ease-out"
-                          //       leaveFrom="transform scale-y-100 opacity-100"
-                          //       leaveTo="transform scale-y-50 opacity-0"
-                          //     >
-                          //       <Disclosure.Panel>
-                          //         <div className="flex flex-col -mt-1 gap-1">
-                          //           {subLink.subLinks.map((subSubLink, k) => (
-                          //             <Link
-                          //               href={subSubLink.href!}
-                          //               key={k}
-                          //               className={`${
-                          //                 router === subSubLink.href
-                          //                   ? "text-lightblue"
-                          //                   : "text-white"
-                          //               } font-dekko text-lg group flex flex-col w-auto px-3 transition duration-300`}
-                          //               onClick={() => close()}
-                          //             >
-                          //               <div className="py-0.5 inline-flex flex-col w-min whitespace-nowrap pl-3">
-                          //                 {subSubLink.label}
-                          //                 <span
-                          //                   className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-1 h-0.5 ${
-                          //                     router === subSubLink.href
-                          //                       ? "bg-lightblue"
-                          //                       : "bg-white"
-                          //                   }`}
-                          //                 />
-                          //               </div>
-                          //             </Link>
-                          //           ))}
-                          //         </div>
-                          //       </Disclosure.Panel>
-                          //     </Transition>
-                          //   </Disclosure>
-                          // ) : (
-                          <Menu.Item key={j}>
-                            {() => (
-                              <Link
-                                href={subLink.href!}
-                                className={`${
+                      <Menu.Items className="absolute right-0 mt-3 w-40 origin-top-right rounded-lg bg-navy border-white divide-y divide-blue divide-opacity-30 shadow-md focus:outline-none ">
+                        {link.subLinks?.map((subLink, j) =>
+                          subLink.subLinks ? (
+                            <Disclosure key={j} as="div">
+                              <Disclosure.Button
+                                className={`font-dekko text-lg group flex flex-col w-auto pb-1 px-3 ${
                                   router === subLink.href ||
                                   subLink.subLinks?.find(
                                     (val) => val.href === router
                                   ) != undefined
                                     ? "text-lightblue"
                                     : "text-white"
-                                } font-dekko text-lg group flex flex-col w-auto py-1 px-3 transition duration-300`}
+                                } pt-1.5`}
                               >
-                                <div className="py-0.5 inline-flex flex-col w-min whitespace-nowrap">
-                                  {subLink.label}
-                                  <span
-                                    className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-1 h-0.5 ${
-                                      router === subLink.href
-                                        ? "bg-lightblue"
-                                        : "bg-white"
-                                    }`}
-                                  />
-                                </div>
-                              </Link>
-                            )}
-                          </Menu.Item>
-                        ))}
+                                {subLink.label}
+                              </Disclosure.Button>
+                              <Transition
+                                enter="transition duration-200 origin-top ease-out"
+                                enterFrom="transform scale-y-50 opacity-0"
+                                enterTo="transform scale-y-100 opacity-100"
+                                leave="transition duration-200 origin-top ease-out"
+                                leaveFrom="transform scale-y-100 opacity-100"
+                                leaveTo="transform scale-y-50 opacity-0"
+                              >
+                                <Disclosure.Panel>
+                                  <div className="flex flex-col -mt-1 gap-1">
+                                    {subLink.subLinks.map((subSubLink, k) => (
+                                      <Link
+                                        href={subSubLink.href!}
+                                        key={k}
+                                        className={`${
+                                          router === subSubLink.href
+                                            ? "text-lightblue"
+                                            : "text-white"
+                                        } font-dekko text-lg group flex flex-col w-auto px-3 transition duration-300`}
+                                        onClick={() => close()}
+                                      >
+                                        <div className="py-0.5 inline-flex flex-col w-min whitespace-nowrap pl-3">
+                                          {subSubLink.label}
+                                          <span
+                                            className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-1 h-0.5 ${
+                                              router === subSubLink.href
+                                                ? "bg-lightblue"
+                                                : "bg-white"
+                                            }`}
+                                          />
+                                        </div>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </Disclosure.Panel>
+                              </Transition>
+                            </Disclosure>
+                          ) : (
+                            <Menu.Item key={j}>
+                              {() => (
+                                <Link
+                                  href={subLink.href!}
+                                  className={`${
+                                    router === subLink.href ||
+                                    subLink.subLinks?.find(
+                                      (val) => val.href === router
+                                    ) != undefined
+                                      ? "text-lightblue"
+                                      : "text-white"
+                                  } font-dekko text-lg group flex flex-col w-auto py-1 px-3 transition duration-300`}
+                                >
+                                  <div className="py-0.5 inline-flex flex-col w-min whitespace-nowrap">
+                                    {subLink.label}
+                                    <span
+                                      className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-1 h-0.5 ${
+                                        router === subLink.href
+                                          ? "bg-lightblue"
+                                          : "bg-white"
+                                      }`}
+                                    />
+                                  </div>
+                                </Link>
+                              )}
+                            </Menu.Item>
+                          )
+                        )}
                       </Menu.Items>
                     </Transition>
                   </>

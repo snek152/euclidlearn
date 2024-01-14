@@ -114,18 +114,34 @@ export const navLinks: NavLink[] = [
       {
         href: "/services/ap",
         label: "AP Tutoring",
-        subLinks: apCourses.map((course) => ({
-          href: `/services/ap/${course.slug}`,
-          label: course.name,
-        })),
+        // subLinks: apCourses.map((course) => ({
+        //   href: `/services/ap/${course.slug}`,
+        //   label: course.name,
+        // })),
       },
       {
-        href: "/services/testprep",
-        label: "SAT/ACT Prep",
+        href: "/services/sat",
+        label: "SAT Prep",
+        // subLinks: testprepCourses.map((course) => ({
+        //   href: `/services/${course.slug}`,
+        //   label: course.name,
+        // })),
       },
       {
-        href: "/services/competition",
-        label: "AIME/USACO Prep",
+        href: "/services/act",
+        label: "ACT Prep",
+        // subLinks: testprepCourses.map((course) => ({
+        //   href: `/services/${course.slug}`,
+        //   label: course.name,
+        // })),
+      },
+      {
+        href: "/services/aime",
+        label: "AIME Prep",
+      },
+      {
+        href: "/services/usaco",
+        label: "USACO Prep",
       },
       {
         href: "/services/consulting",
