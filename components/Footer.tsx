@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <section className="bg-navy rounded-2xl m-2 px-5 py-3 shadow-sm text-white">
       <div className="flex justify-between">
-        <h1 className="font-dm text-xl w-full">
+        <h1 className="font-dm text-xl whitespace-nowrap">
           Providing Guidance, One Student at a Time
         </h1>
         <div className="flex gap-3 w-full justify-end">
@@ -42,7 +42,16 @@ export default function Footer() {
         </div>
       </div>
       <p className="text-center pt-3 text-lg font-antic">
-        © 2023 by EuclidLearn. All Rights Reserved.
+        © 2023 by EuclidLearn. All Rights Reserved. Website developed by{" "}
+        <a
+          className="underline underline-offset-[2.5px]"
+          href="https://snehilkakani.me"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Snehil Kakani
+        </a>
+        .
       </p>
     </section>
   );
