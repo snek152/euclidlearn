@@ -15,8 +15,8 @@ export default function About() {
       >
         <LinkButton
           href="/register"
-          className="text-white bg-blue text-lg px-10 py-1"
-          hoverClass="text-white bg-navy bg-opacity-30"
+          className="text-black bg-orange text-lg px-10 py-1"
+          hoverClass="text-black bg-navy bg-opacity-10"
         >
           Join Us
         </LinkButton>

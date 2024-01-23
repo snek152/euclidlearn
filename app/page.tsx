@@ -25,14 +25,14 @@ export default function Home() {
           <div className="flex gap-3">
             <LinkButton
               href="/register"
-              className="text-white bg-blue text-lg px-4 py-1"
-              hoverClass="text-white bg-navy bg-opacity-30"
+              className="text-black bg-yellow text-lg px-4 py-1"
+              hoverClass="text-black bg-navy bg-opacity-10"
             >
               Course Registration
             </LinkButton>
             <LinkButton
               href="/register"
-              className="text-white bg-gray text-lg px-4 py-1"
+              className="text-white bg-navy text-lg px-4 py-1"
               hoverClass="text-white bg-black bg-opacity-30"
             >
               Join Our Team
@@ -60,7 +60,7 @@ export default function Home() {
         />
       </section>
       <section className="p-5">
-        {/* <h1 className="font-dm text-4xl">What We Offer</h1> */}
+        <h1 className="font-dm text-4xl mb-5 text-center">What We Offer</h1>
         <div className="grid grid-cols-3 md:grid-cols-6 gap-5">
           <CourseCard title="AP" href="/services/ap" />
           <CourseCard title="SAT" href="/services/sat" />
@@ -93,7 +93,7 @@ export default function Home() {
         imageSrc={results}
       />
       <section className="p-5">
-        <h1 className="font-dm text-4xl">Why Us</h1>
+        <h1 className="font-dm text-4xl">Why Us?</h1>
         <div className="grid md:grid-cols-3 gap-5 py-4">
           <CourseFormatCard
             icon={

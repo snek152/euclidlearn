@@ -19,6 +19,8 @@ const config: Config = {
         blue: "#6096BA",
         lightblue: "#A3CDF1",
         gray: "#8B8C89",
+        yellow: "#ffd60a",
+        orange: "#ffc300",
       },
       keyframes: {
         wiggle: {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Antic, DM_Serif_Display, Dekko } from "next/font/google";
+import { Antic, DM_Serif_Display, Raleway, Urbanist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -12,19 +12,19 @@ const dm = DM_Serif_Display({
   subsets: ["latin"],
 });
 
-const antic = Antic({
-  weight: ["400"],
-  style: "normal",
-  display: "swap",
-  variable: "--font-antic",
-  subsets: ["latin"],
-});
-
-const dekko = Dekko({
-  weight: "400",
+const antic = Urbanist({
+  weight: "variable",
   style: "normal",
   display: "swap",
   variable: "--font-dekko",
+  subsets: ["latin"],
+});
+
+const dekko = Raleway({
+  weight: "variable",
+  style: "normal",
+  display: "swap",
+  variable: "--font-antic",
   subsets: ["latin"],
 });
 

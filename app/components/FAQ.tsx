@@ -2,18 +2,51 @@
 
 import { Disclosure } from "@headlessui/react";
 
+const faq: [string, string][] = [
+  [
+    "Is a free trial available?",
+    "Yes! We offer one free trial lesson between your student and a mentor on our team.",
+  ],
+  [
+    "Why EuclidLearn?",
+    "We possess an in-depth understanding of the education system, coupled with proven strategies for student success. Our accomplished team is dedicated to delivering a great educational experience for your students",
+  ],
+  [
+    "What is unique about Euclid Learn?",
+    "We tailor to individual learning styles, providing personalized learning experiences to optimize comprehension and retention.",
+  ],
+];
+
 export default function FAQ() {
   return (
     <section className="p-5">
-      <h1 className="font-dm text-4xl">Frequently Asked Questions</h1>
-      <Disclosure>
-        <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-white bg-navy rounded-lg hover:bg-opacity-80 focus:outline-none focus-visible:ring focus-visible:ring-navy focus-visible:ring-opacity-75">
-          Hello
-        </Disclosure.Button>
-        <Disclosure.Panel>
-          <p className="px-4 py-2 text-sm text-gray-500">World</p>
-        </Disclosure.Panel>
-      </Disclosure>
+      <h1 className="font-dm text-4xl pb-2">Frequently Asked Questions</h1>
+      <div className="mx-5">
+        {faq.map((arr, i) => (
+          <Disclosure key={i}>
+            <Disclosure.Button className="flex justify-between w-full py-2 font-dm text-2xl text-left rounded-lg focus:outline-none">
+              {arr[0]}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                />
+              </svg>
+            </Disclosure.Button>
+            <Disclosure.Panel>
+              <p className="px-4 py-2 font-antic text-lg">{arr[1]}</p>
+            </Disclosure.Panel>
+          </Disclosure>
+        ))}
+      </div>
     </section>
   );
 }
