@@ -125,7 +125,7 @@ export default function CourseCard(props: CourseCardProps) {
   const router = useRouter();
   return (
     <button
-      className="rounded-2xl bg-white group border-black md:border-transparent border shadow-sm flex flex-col relative p-4 justify-start items-center border-opacity-5 hover:border-black hover:border-opacity-50 transition-colors duration-500"
+      className="rounded-2xl bg-white group border-black md:border-red md:border-opacity-10 border shadow-sm flex flex-col relative p-4 justify-start items-center border-opacity-5 hover:border-black hover:border-opacity-50 transition-colors duration-500"
       onMouseEnter={() => {
         // router.prefetch(props.href.split("#")[0]);
       }}

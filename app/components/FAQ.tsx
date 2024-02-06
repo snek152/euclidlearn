@@ -23,10 +23,13 @@ export default function FAQ() {
       <h1 className="font-dm text-4xl pb-2">Frequently Asked Questions</h1>
       <div className="mx-5">
         {faq.map((arr, i) => (
-          <Disclosure key={i}>
-            <Disclosure.Button className="flex justify-between w-full py-2 font-dm text-2xl text-left rounded-lg focus:outline-none">
+          <>
+            <div
+              className="flex justify-between w-full py-2 font-dm text-2xl text-left rounded-lg focus:outline-none"
+              key={i}
+            >
               {arr[0]}
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -37,14 +40,12 @@ export default function FAQ() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
                 />
-              </svg>
-            </Disclosure.Button>
-            <Disclosure.Panel>
-              <p className="px-4 py-2 font-antic text-lg">{arr[1]}</p>
-            </Disclosure.Panel>
-          </Disclosure>
+              </svg> */}
+            </div>
+            <p className="px-4 font-antic text-lg">{arr[1]}</p>
+          </>
         ))}
       </div>
     </section>

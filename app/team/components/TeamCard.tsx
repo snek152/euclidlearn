@@ -23,10 +23,10 @@ export default function TeamCard(props: TeamCardProps) {
         <div className="md:col-span-5 px-5 py-3 gap-1 flex flex-col justify-center">
           <div className="flex md:flex-row flex-col gap-2 md:items-end">
             <h1 className="font-dm text-2xl md:text-4xl">{props.name}</h1>
-            <h2 className="font-dekko hidden md:block text-3xl text-navy">
+            <h2 className="font-dekko hidden md:block text-3xl text-red">
               &ndash;
             </h2>
-            <h2 className="font-dekko text-2xl md:text-3xl text-navy">
+            <h2 className="font-dekko text-2xl md:text-3xl text-red">
               {props.role}
             </h2>
           </div>

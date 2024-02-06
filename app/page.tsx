@@ -25,8 +25,8 @@ export default function Home() {
           <div className="flex gap-3">
             <LinkButton
               href="/register"
-              className="text-black bg-yellow text-lg px-4 py-1"
-              hoverClass="text-black bg-navy bg-opacity-10"
+              className="text-white bg-red text-lg px-4 py-1"
+              hoverClass="text-white bg-navy bg-opacity-10"
             >
               Course Registration
             </LinkButton>
@@ -92,9 +92,9 @@ export default function Home() {
         description="Our mentors are available round-the-clock to provide support across all subjects. We firmly believe continuous mentorship significantly accelerates progress, ensuring unparalleled advancement for our students."
         imageSrc={results}
       />
-      <section className="p-5">
+      <section className="p-5 pb-0">
         <h1 className="font-dm text-4xl">Why Us?</h1>
-        <div className="grid md:grid-cols-3 gap-5 py-4">
+        <div className="grid md:grid-cols-3 gap-5 py-4 pb-5">
           <CourseFormatCard
             icon={
               <svg

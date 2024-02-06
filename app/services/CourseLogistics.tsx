@@ -7,7 +7,7 @@ interface CourseLogisticsProps {
 
 const CourseLogisticsBox = (props: { title: string; content: string }) => {
   return (
-    <div className="flex flex-col text-center bg-white w-40 py-3 shadow-sm border-orange border border-opacity-30 rounded-lg">
+    <div className="flex flex-col text-center bg-white w-40 py-3 shadow-sm border-red border border-opacity-30 rounded-lg">
       <p className="font-antic text-lg">{props.title}</p>
       <h1 className="font-dm text-3xl">{props.content}</h1>
     </div>
