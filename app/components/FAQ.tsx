@@ -27,7 +27,7 @@ const faq: [string, string][] = [
 ];
 
 export default function FAQ() {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(window?.innerWidth);
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
     return () => {
