@@ -63,14 +63,20 @@ export default function Navbar() {
           }
         </Popover.Button>
         <Popover.Panel className="bg-navy w-full flex rounded-xl shadow-lg mt-2 px-3 py-2 flex-col absolute left-0">
-          {navLinks.map((link, i) =>
+          {[
+            ...navLinks,
+            {
+              label: "Register",
+              href: "/register",
+            },
+          ].map((link, i) =>
             link.href ? (
               <Popover.Button
                 as={Link}
                 href={link.href}
                 key={i}
                 className={`font-dekko text-xl flex flex-col group transition duration-300 ${
-                  router === link.href ? "text-green" : "text-white"
+                  router === link.href ? "text-lightblue" : "text-white"
                 }`}
               >
                 {link.label}
@@ -86,7 +92,7 @@ export default function Navbar() {
                             val.href === router ||
                             router.indexOf(val.href!) != -1
                         ) != undefined
-                          ? "text-green"
+                          ? "text-lightblue"
                           : "text-white"
                       }`}
                     >
@@ -122,7 +128,7 @@ export default function Navbar() {
                     }`}
                   /> */}
                     </Disclosure.Button>
-                    <Disclosure.Panel className="divide-y divide-green divide-opacity-30 focus:outline-none">
+                    <Disclosure.Panel className="divide-y divide-lightblue divide-opacity-30 focus:outline-none">
                       {link.subLinks?.map((subLink, j) =>
                         subLink.subLinks ? (
                           <Disclosure key={j} as="div">
@@ -132,7 +138,7 @@ export default function Navbar() {
                                 subLink.subLinks?.find(
                                   (val) => val.href === router
                                 ) != undefined
-                                  ? "text-green"
+                                  ? "text-lightblue"
                                   : "text-white"
                               } pt-1.5`}
                             >
@@ -155,7 +161,7 @@ export default function Navbar() {
                                       key={k}
                                       className={`${
                                         router === subSubLink.href
-                                          ? "text-green"
+                                          ? "text-lightblue"
                                           : "text-white"
                                       } font-dekko text-lg group flex flex-col w-auto px-3 transition duration-300`}
                                       onClick={() => close()}
@@ -177,7 +183,7 @@ export default function Navbar() {
                               href={subLink.href!}
                               className={`${
                                 router === subLink.href
-                                  ? "text-green"
+                                  ? "text-lightblue"
                                   : "text-white"
                               } font-dekko text-lg flex flex-col w-auto py-0.5 pl-2 transition duration-300`}
                             >
@@ -203,13 +209,13 @@ export default function Navbar() {
                 href={link.href}
                 key={i}
                 className={`font-dekko text-xl flex flex-col group transition duration-300 ${
-                  router === link.href ? "text-green" : "text-white"
+                  router === link.href ? "text-lightblue" : "text-white"
                 }`}
               >
                 {link.label}
                 <span
                   className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-0.5 h-0.5 ${
-                    router === link.href ? "bg-green" : "bg-white"
+                    router === link.href ? "bg-lightblue" : "bg-white"
                   }`}
                 />
               </Link>
@@ -224,7 +230,7 @@ export default function Navbar() {
                             val.href === router ||
                             router.indexOf(val.href!) != -1
                         ) != undefined
-                          ? "text-green"
+                          ? "text-lightblue"
                           : "text-white"
                       }`}
                     >
@@ -269,7 +275,7 @@ export default function Navbar() {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="absolute right-0 mt-3 w-40 origin-top-right rounded-lg bg-navy border-white divide-y divide-green divide-opacity-30 shadow-md focus:outline-none ">
+                      <Menu.Items className="absolute right-0 mt-3 w-40 origin-top-right rounded-lg bg-navy border-white divide-y divide-lightblue divide-opacity-30 shadow-md focus:outline-none ">
                         {link.subLinks?.map((subLink, j) =>
                           subLink.subLinks ? (
                             <Disclosure key={j} as="div">
@@ -279,7 +285,7 @@ export default function Navbar() {
                                   subLink.subLinks?.find(
                                     (val) => val.href === router
                                   ) != undefined
-                                    ? "text-green"
+                                    ? "text-lightblue"
                                     : "text-white"
                                 } pt-1.5`}
                               >
@@ -301,7 +307,7 @@ export default function Navbar() {
                                         key={k}
                                         className={`${
                                           router === subSubLink.href
-                                            ? "text-green"
+                                            ? "text-lightblue"
                                             : "text-white"
                                         } font-dekko text-lg group flex flex-col w-auto px-3 transition duration-300`}
                                         onClick={() => close()}
@@ -311,7 +317,7 @@ export default function Navbar() {
                                           <span
                                             className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-1 h-0.5 ${
                                               router === subSubLink.href
-                                                ? "bg-green"
+                                                ? "bg-lightblue"
                                                 : "bg-white"
                                             }`}
                                           />
@@ -332,7 +338,7 @@ export default function Navbar() {
                                     subLink.subLinks?.find(
                                       (val) => val.href === router
                                     ) != undefined
-                                      ? "text-green"
+                                      ? "text-lightblue"
                                       : "text-white"
                                   } font-dekko text-lg group flex flex-col w-auto py-1 px-3 transition duration-300`}
                                 >
@@ -341,7 +347,7 @@ export default function Navbar() {
                                     <span
                                       className={`block max-w-0 group-hover:max-w-full transition-all duration-300 -mt-1 h-0.5 ${
                                         router === subLink.href
-                                          ? "bg-green"
+                                          ? "bg-lightblue"
                                           : "bg-white"
                                       }`}
                                     />

@@ -149,10 +149,10 @@ export const navLinks: NavLink[] = [
       },
     ],
   },
-  {
-    label: "Events",
-    href: "/events",
-  },
+  // {
+  //   label: "Events",
+  //   href: "/events",
+  // },
 ];
 
 export const teamMembers: TeamMember[] = [

@@ -10,7 +10,7 @@ export interface SmallBannerProps {
 
 export default function SmallBanner(props: SmallBannerProps) {
   return (
-    <section className="bg-blue/60 h-72 pt-16 md:pt-14 px-2 md:px-7 mb-10 relative flex flex-col md:flex-row items-center justify-center">
+    <section className="bg-blue/60 h-80 pt-16 md:pt-14 px-2 md:px-7 mb-10 relative flex flex-col md:flex-row items-center justify-center">
       <div className="z-10 flex flex-col h-full md:gap-3 w-[95%] justify-center md:p-5">
         <h1 className="font-dm text-3xl md:text-5xl">{props.title}</h1>
         <h2 className="font-antic text-xl pb-2 md:pb-0 md:text-2xl max-w-[50ch]">
@@ -24,7 +24,7 @@ export default function SmallBanner(props: SmallBannerProps) {
         </p>
       )}
       <svg
-        className="absolute top-72 z-0"
+        className="absolute top-80 z-0"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
       >

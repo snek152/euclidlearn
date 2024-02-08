@@ -5,11 +5,11 @@ import { Fragment } from "react";
 export default function Footer() {
   return (
     <section className="bg-navy rounded-2xl m-2 px-5 py-3 shadow-sm text-white">
-      <div className="flex justify-between">
-        <h1 className="font-dm text-xl whitespace-nowrap">
+      <div className="flex flex-col md:flex-row justify-between">
+        <h1 className="font-dm text-2xl">
           Providing Guidance, One Student at a Time
         </h1>
-        <div className="flex gap-3 w-full justify-end">
+        <div className="flex flex-col md:flex-row gap-3 w-full justify-end">
           {navLinks.map((link, i) =>
             link.href ? (
               <Link
@@ -41,7 +41,7 @@ export default function Footer() {
           )}
         </div>
       </div>
-      <p className="text-center pt-3 text-lg font-antic">
+      <p className="md:text-center pt-3 text-lg font-antic">
         © 2023 by EuclidLearn. All Rights Reserved. Website developed by{" "}
         <a
           className="underline underline-offset-[2.5px]"

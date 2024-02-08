@@ -22,7 +22,7 @@ export default function Home() {
           <h2 className="font-antic text-lg md:text-2xl max-w-[50ch]">
             Providing Guidance, One Student at a Time
           </h2>
-          <div className="flex gap-3">
+          <div className="flex flex-col md:flex-row gap-3">
             <LinkButton
               href="/register"
               className="text-white bg-red text-lg px-4 py-1"
@@ -61,7 +61,7 @@ export default function Home() {
       </section>
       <section className="p-5">
         <h1 className="font-dm text-4xl mb-5 text-center">What We Offer</h1>
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5">
           <CourseCard title="AP" href="/services/ap" />
           <CourseCard title="SAT" href="/services/sat" />
           <CourseCard title="ACT" href="/services/act" />

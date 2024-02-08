@@ -14,11 +14,11 @@ export interface CourseBannerProps {
 
 export default function CourseBanner(props: CourseBannerProps) {
   return (
-    <section className="bg-blue/60 h-48 pt-48 px-7 mb-40 relative flex items-center justify-center">
+    <section className="bg-blue/60 h-80 md:h-48 pt-36 md:pt-48 px-7 mb-40 relative flex items-center justify-center">
       {props.backTo && props.backToHref ? (
         <Link
           href={props.backToHref}
-          className="left-2 top-14 group transition duration-300 z-10 absolute text-xl font-dekko"
+          className="left-2 top-14 group transition duration-300 z-10 absolute text-base md:text-xl font-dekko"
         >
           <div className="flex gap-1 items-center justify-center">
             Back to {props.backTo}
@@ -44,9 +44,11 @@ export default function CourseBanner(props: CourseBannerProps) {
       ) : (
         <></>
       )}
-      <div className="z-10 flex flex-col items-center h-full gap-3 w-[95%] justify-center p-5">
-        <h1 className="font-dm w-full text-5xl text-center">{props.title}</h1>
-        <h2 className="font-antic text-xl text-center max-w-[60ch]">
+      <div className="z-10 flex flex-col items-center h-full gap-3 w-[95%] justify-center px-5 pb-5 pt-2 md:p-5">
+        <h1 className="font-dm w-full text-3xl md:text-5xl text-center">
+          {props.title}
+        </h1>
+        <h2 className="font-antic text-base md:text-xl text-center max-w-[60ch]">
           {props.description}
         </h2>
         <div className="flex gap-3">
@@ -60,7 +62,7 @@ export default function CourseBanner(props: CourseBannerProps) {
         </div>
       </div>
       <svg
-        className="absolute top-48 z-0"
+        className="absolute top-80 md:top-48 z-0"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
       >

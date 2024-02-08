@@ -37,7 +37,7 @@ const ArrowButton = (props: { side: "left" | "right" }) => {
 
   return (
     <button
-      className={`rounded-full bg-red text-white absolute z-20 p-2 grid place-items-center top-[calc(50%-22px)] ${
+      className={`rounded-full bg-navy text-white absolute z-20 p-2 grid place-items-center top-[calc(50%-22px)] ${
         props.side === "left" ? "left-1" : "right-1"
       }`}
     >
