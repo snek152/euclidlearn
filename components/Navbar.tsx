@@ -366,8 +366,8 @@ export default function Navbar() {
           )}
           <LinkButton
             href="/register"
-            className="text-black bg-lightblue text-xl px-5 py-2"
-            hoverClass="text-black bg-blue bg-opacity-30"
+            className="text-white bg-red text-xl px-5 py-2"
+            hoverClass="text-white bg-black bg-opacity-30"
           >
             Register Now
           </LinkButton>

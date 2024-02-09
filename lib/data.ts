@@ -143,10 +143,10 @@ export const navLinks: NavLink[] = [
         href: "/services/usaco",
         label: "USACO Prep",
       },
-      {
-        href: "/services/consulting",
-        label: "Consulting",
-      },
+      // {
+      //   href: "/services/consulting",
+      //   label: "Consulting",
+      // },
     ],
   },
   // {
@@ -165,7 +165,7 @@ export const teamMembers: TeamMember[] = [
       "1560 SAT Score",
     ],
     bio: "Hey there! I'm Woojin and I absolutely love hardware engineering. When I'm not tinkering with tech, you'll find me collecting Pokémon cards, diving into 3D printing projects, and working on unique animations.",
-    image: "/trusted.png",
+    image: "/team/woojin.png",
   },
   {
     name: "Abhinav Raja",
@@ -178,7 +178,7 @@ export const teamMembers: TeamMember[] = [
       "STEM Expert",
     ],
     bio: "Hey, I'm Abhinav! I love exploring machine learning in military applications. Outside of that, I'm into chess, tennis, and making music in my free time.",
-    image: "/trusted.png",
+    image: "/team/abhinav.png",
   },
   {
     name: "Anirudh Shyam",

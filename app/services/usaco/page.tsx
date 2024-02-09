@@ -14,12 +14,31 @@ export default function Page() {
         // backTo="Test Prep"
         // backToHref="/services/testprep"
       />
-
-      <CourseCard
-        name="Practical Application in the Real World"
-        desc="Participating in the USACO opens doors for students to delve into the world of competitive programming, algorithms, and code design. Whether navigating Computer Science courses in university or facing coding interviews with leading tech giants such as Apple, Amazon, or Tesla, students can leverage their USACO experience. Throughout this journey, they will acquire essential coding skills, including effective debugging practices, thorough time complexity analysis, and more"
-        center
-      />
+      <section className="p-5">
+        <h1 className="font-dm text-4xl text-center">A Bottom-Up Approach</h1>
+        <div className="grid grid-cols-4 gap-3">
+          <CourseCard
+            name="USACO Bronze"
+            desc="Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur."
+            center
+          />
+          <CourseCard
+            name="USACO Silver"
+            desc="Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur."
+            center
+          />
+          <CourseCard
+            name="USACO Gold"
+            desc="Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur."
+            center
+          />
+          <CourseCard
+            name="USACO Platinum"
+            desc="Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur."
+            center
+          />
+        </div>
+      </section>
       <CourseLogistics {...testprepCourses[1].logistics} />
     </section>
   );

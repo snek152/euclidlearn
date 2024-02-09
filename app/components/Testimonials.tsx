@@ -59,7 +59,7 @@ const Testimonial = (props: { name: string; content: string }) => {
 
 export default function Testimonials() {
   return (
-    <div className="relative mb-10 mx-5 pb-3 md:px-[22px] rounded-2xl border-navy border-opacity-50 border shadow-sm">
+    <div className="relative mb-10 mx-5 pb-3 md:px-[22px] rounded-2xl border-red border-opacity-50 border shadow-sm">
       {/* <svg
         className="absolute w-screen md:min-w-0 -left-5 -top-[7vw] z-0 rotate-180"
         viewBox="0 0 1440 490"

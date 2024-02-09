@@ -12,7 +12,7 @@ export default function APpage({ params }: { params: { slug: string } }) {
         backTo="AP Courses"
         backToHref="/services/ap"
       />
-      <section className="">
+      <section className="p-5">
         <h1 className="font-dm text-4xl text-center">Course Curriculum</h1>
         {course.curriculum.map((unit, i) => (
           // <div className="p-5" key={i}>
