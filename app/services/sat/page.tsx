@@ -3,6 +3,16 @@ import CourseBanner from "../CourseBanner";
 import CourseLogistics from "../CourseLogistics";
 import CourseCard from "../CourseCard";
 import CourseFormatCard from "@/app/components/CourseFormatCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "EuclidLearn | SAT Prep",
+  openGraph: {
+    type: "website",
+    title: "EuclidLearn | SAT Prep",
+    url: "https://euclidlearn.com/services/sat",
+  },
+};
 
 export default function Page() {
   return (

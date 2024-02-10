@@ -4,6 +4,16 @@ import CourseLogistics from "../CourseLogistics";
 import CourseCard from "../CourseCard";
 import HomeSection from "@/app/components/HomeSection";
 import mentor from "@/images/mentor.png";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "EuclidLearn | USACO Prep",
+  openGraph: {
+    type: "website",
+    title: "EuclidLearn | USACO Prep",
+    url: "https://euclidlearn.com/services/usaco",
+  },
+};
 
 export default function Page() {
   return (

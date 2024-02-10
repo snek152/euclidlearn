@@ -4,8 +4,18 @@ import SmallBanner from "@/components/SmallBanner";
 import { apCourses, testprepCourses } from "@/lib/data";
 import { Listbox, Menu, Transition } from "@headlessui/react";
 import { Field, Form, Formik } from "formik";
+import { Metadata } from "next";
 import { Fragment } from "react";
 import * as Yup from "yup";
+
+export const metadata: Metadata = {
+  title: "EuclidLearn | Register",
+  openGraph: {
+    type: "website",
+    title: "EuclidLearn | Register",
+    url: "https://euclidlearn.com/register",
+  },
+};
 
 const svgThing = (
   <svg

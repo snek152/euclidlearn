@@ -2,6 +2,16 @@ import { testprepCourses } from "@/lib/data";
 import CourseBanner from "../CourseBanner";
 import CourseLogistics from "../CourseLogistics";
 import CourseCard from "../CourseCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "EuclidLearn | ACT Prep",
+  openGraph: {
+    type: "website",
+    title: "EuclidLearn | ACT Prep",
+    url: "https://euclidlearn.com/services/act",
+  },
+};
 
 export default function Page() {
   return (

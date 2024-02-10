@@ -4,6 +4,16 @@ import CourseCard from "../CourseCard";
 import SmallBanner from "@/components/SmallBanner";
 import { LinkButton } from "@/components/Button";
 import CourseLogistics from "../CourseLogistics";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "EuclidLearn | AP Tutoring",
+  openGraph: {
+    type: "website",
+    title: "EuclidLearn | AP Tutoring",
+    url: "https://euclidlearn.com/services/ap",
+  },
+};
 
 export default function AP() {
   return (

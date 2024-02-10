@@ -4,6 +4,16 @@ import TeamCard from "./components/TeamCard";
 import image from "@/images/trusted.png";
 import { LinkButton } from "@/components/Button";
 import { teamMembers } from "@/lib/data";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "EuclidLearn | Meet the Team",
+  openGraph: {
+    type: "website",
+    title: "EuclidLearn | Meet the Team",
+    url: "https://euclidlearn.com/team",
+  },
+};
 
 export default function About() {
   return (

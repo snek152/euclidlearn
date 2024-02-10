@@ -1,6 +1,38 @@
 import { apCourses } from "@/lib/data";
 import CourseCard from "../../CourseCard";
 import CourseBanner from "../../CourseBanner";
+import { Metadata, ResolvingMetadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "EuclidLearn | ACT Prep",
+//   openGraph: {
+//     type: "website",
+//     title: "EuclidLearn | ACT Prep",
+//     url: "https://euclidlearn.com/services/act",
+//   },
+// };
+
+export async function generateMetadata(
+  {
+    params,
+  }: {
+    params: { slug: string };
+  },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  return {
+    title: `EuclidLearn | ${
+      apCourses.find((course) => course.slug === params.slug)!.name
+    }`,
+    openGraph: {
+      type: "website",
+      title: `EuclidLearn | ${
+        apCourses.find((course) => course.slug === params.slug)!.name
+      }`,
+      url: `https://euclidlearn.com/services/ap/${params.slug}`,
+    },
+  };
+}
 
 export default function APpage({ params }: { params: { slug: string } }) {
   const course = apCourses.find((course) => course.slug === params.slug)!;
