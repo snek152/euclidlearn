@@ -2,6 +2,8 @@ import { testprepCourses } from "@/lib/data";
 import CourseBanner from "../CourseBanner";
 import CourseLogistics from "../CourseLogistics";
 import CourseCard from "../CourseCard";
+import HomeSection from "@/app/components/HomeSection";
+import mentor from "@/images/mentor.png";
 
 export default function Page() {
   return (
@@ -14,6 +16,16 @@ export default function Page() {
         // backTo="Test Prep"
         // backToHref="/services/testprep"
       />
+      <section className="p-5">
+        <HomeSection
+          title="Private Lessons"
+          description="Dolore in non velit tempor ut irure reprehenderit duis ut labore. Fugiat tempor anim eu elit labore pariatur esse consectetur laborum velit tempor et culpa officia. Nostrud nulla ipsum est officia deserunt laboris id proident eiusmod labore est. Nisi laboris exercitation ut ullamco sint occaecat deserunt adipisicing commodo consequat est aute quis. "
+          imageSrc={mentor}
+          video="/USACOvideo.mp4"
+          reverse
+          minimal
+        />
+      </section>
       <section className="p-5">
         <h1 className="font-dm text-4xl text-center mb-2">
           A Bottom-Up Approach
