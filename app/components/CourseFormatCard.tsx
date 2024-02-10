@@ -1,4 +1,4 @@
-const svgThing = (
+export const svgThing = (
   <svg
     viewBox="0 0 384 12"
     fill="none"

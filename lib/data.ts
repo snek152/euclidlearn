@@ -163,6 +163,8 @@ export const teamMembers: TeamMember[] = [
       "Two Time AIME Qualifier",
       "Distinguished Honor Roll Top 1%",
       "1560 SAT Score",
+      "USACO Platinum*http://www.usaco.org/current/data/jan24_gold_results.html",
+      "USAMO Qualifier",
     ],
     bio: "Hey there! I'm Woojin and I absolutely love hardware engineering. When I'm not tinkering with tech, you'll find me collecting Pokémon cards, diving into 3D printing projects, and working on unique animations.",
     image: "/team/woojin.png",

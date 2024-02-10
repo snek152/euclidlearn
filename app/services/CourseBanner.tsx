@@ -14,7 +14,7 @@ export interface CourseBannerProps {
 
 export default function CourseBanner(props: CourseBannerProps) {
   return (
-    <section className="bg-blue/60 h-80 md:h-48 pt-36 md:pt-48 px-7 mb-40 relative flex items-center justify-center">
+    <section className="bg-blue/60 h-80 md:h-48 pt-36 md:pt-56 px-7 mb-20 md:mb-40 relative flex items-center justify-center">
       {props.backTo && props.backToHref ? (
         <Link
           href={props.backToHref}
@@ -62,7 +62,7 @@ export default function CourseBanner(props: CourseBannerProps) {
         </div>
       </div>
       <svg
-        className="absolute top-80 md:top-48 z-0"
+        className="absolute top-80 md:top-56 z-0"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
       >

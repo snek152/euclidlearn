@@ -34,7 +34,18 @@ export default function TeamCard(props: TeamCardProps) {
           <ul className="grid list-disc pt-1 list-inside grid-cols-1 md:grid-cols-2 self-center w-full">
             {props.quals.map((qual) => (
               <li key={qual} className="font-antic text-xl">
-                {qual}
+                {qual.includes("*") ? (
+                  <a
+                    className="underline underline-offset-[1.5px]"
+                    href={qual.split("*")[1]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {qual.split("*")[0]}
+                  </a>
+                ) : (
+                  qual
+                )}
               </li>
             ))}
           </ul>

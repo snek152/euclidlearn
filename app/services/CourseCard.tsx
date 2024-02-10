@@ -2,17 +2,27 @@ interface CourseCardProps {
   name: string;
   desc: string;
   center?: boolean;
+  to?: string;
 }
 
-export default function CourseCard({ name, desc, center }: CourseCardProps) {
+export default function CourseCard({
+  name,
+  desc,
+  center,
+  to,
+}: CourseCardProps) {
   return (
     <section
-      className={`border-2 bg-white bg-opacity-20 group my-3 font-dm ${
+      className={`border-2 bg-white bg-opacity-20 group md:my-3 font-dm ${
         center ? "text-2xl" : "text-2xl"
       } border-red rounded-lg py-2 relative px-3`}
     >
       <h1 className={`z-10 relative ${center ? "text-center" : ""}`}>{name}</h1>
-      <span className="absolute group-hover:w-full transition-all top-0 left-0 group-hover:opacity-25 z-0 duration-200 bg-gradient-to-r from-white to-lightblue rounded-lg h-full opacity-0 w-[0%]"></span>
+      <span
+        className={`absolute md:group-hover:w-full transition-all top-0 left-0 md:group-hover:opacity-25 z-0 duration-200 bg-gradient-to-r from-white ${
+          to ? to : "to-lightblue"
+        } rounded-lg h-full md:opacity-0 opacity-50 md:w-[0%] w-full`}
+      ></span>
       <div
         className={`${
           center ? "text-base" : "text-lg"

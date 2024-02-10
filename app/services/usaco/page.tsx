@@ -15,27 +15,33 @@ export default function Page() {
         // backToHref="/services/testprep"
       />
       <section className="p-5">
-        <h1 className="font-dm text-4xl text-center">A Bottom-Up Approach</h1>
-        <div className="grid grid-cols-4 gap-3">
+        <h1 className="font-dm text-4xl text-center mb-2">
+          A Bottom-Up Approach
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
           <CourseCard
             name="USACO Bronze"
             desc="Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur."
             center
+            to="to-orange-300"
           />
           <CourseCard
             name="USACO Silver"
             desc="Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur."
             center
+            to="to-gray"
           />
           <CourseCard
             name="USACO Gold"
             desc="Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur."
             center
+            to="to-amber-400"
           />
           <CourseCard
             name="USACO Platinum"
             desc="Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur."
             center
+            to="to-zinc-900"
           />
         </div>
       </section>
