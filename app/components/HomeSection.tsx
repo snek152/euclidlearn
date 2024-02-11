@@ -22,6 +22,7 @@ export default function HomeSection(props: HomeSectionProps) {
           src={props.video}
           autoPlay
           loop
+          muted
           controls={false}
           className={`md:col-span-3 aspect-[6/4] object-cover object-center rounded-3xl shadow-sm  ${
             props.reverse ? "md:order-1" : ""

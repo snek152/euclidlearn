@@ -14,7 +14,7 @@ export interface CourseBannerProps {
 
 export default function CourseBanner(props: CourseBannerProps) {
   return (
-    <section className="bg-blue/60 h-80 md:h-48 pt-36 md:pt-56 px-7 mb-20 md:mb-40 relative flex items-center justify-center">
+    <section className="bg-blue/60 h-80 md:h-48 pt-36 md:pt-52 px-7 mb-20 md:mb-40 relative flex items-center justify-center">
       {props.backTo && props.backToHref ? (
         <Link
           href={props.backToHref}
@@ -53,16 +53,16 @@ export default function CourseBanner(props: CourseBannerProps) {
         </h2>
         <div className="flex gap-3">
           <LinkButton
-            className="px-6 py-1 bg-navy text-white text-lg"
+            className="bg-navy text-white px-5 py-1 text-lg"
+            hoverClass="bg-black bg-opacity-30 text-white"
             href="/register"
-            hoverClass="bg-black bg-opacity-20 text-white"
           >
-            Register
+            Register Now
           </LinkButton>
         </div>
       </div>
       <svg
-        className="absolute top-80 md:top-56 z-0"
+        className="absolute top-80 md:top-52 z-0"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
       >

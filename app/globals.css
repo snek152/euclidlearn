@@ -5,6 +5,7 @@
 body,
 html {
   @apply bg-white;
+  scrollbar-color: #dde9ef #3f3fb3;
 }
 
 body {
@@ -13,4 +14,22 @@ body {
 
 section {
   @apply relative z-10;
+}
+
+::-webkit-scrollbar {
+  background-color: #edf0f3;
+  color: #edf0f3;
+  width: 12px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #edf0f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #274c77;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #274c77;
 }

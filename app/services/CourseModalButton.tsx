@@ -26,11 +26,11 @@ export default function CourseModalButton({ course }: CourseModalButtonProps) {
   return (
     <>
       <button
-        className="border-2 bg-white bg-opacity-20 group font-dekko text-xl border-blue rounded-full py-2 relative z-0"
+        className="border bg-white bg-opacity-20 group font-dekko text-xl border-red shadow rounded-xl py-2 relative z-0"
         onClick={() => setOpen(true)}
       >
         <span className="z-10 relative">{course.name}</span>
-        <span className="absolute group-hover:w-full transition-all top-0 left-0 group-hover:opacity-25 z-0 duration-200 bg-gradient-to-r from-white to-lightblue rounded-full h-full opacity-0 w-[0%]"></span>
+        <span className="absolute group-hover:w-full transition-all top-0 left-0 group-hover:opacity-25 z-0 duration-200 bg-gradient-to-r from-white to-lightblue rounded-xl h-full opacity-0 w-[0%]"></span>
       </button>
       <Transition appear show={open} as={Fragment}>
         <Dialog

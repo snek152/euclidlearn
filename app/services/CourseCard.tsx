@@ -13,9 +13,9 @@ export default function CourseCard({
 }: CourseCardProps) {
   return (
     <section
-      className={`border-2 bg-white bg-opacity-20 group md:my-3 font-dm ${
+      className={`border bg-white bg-opacity-20 group md:my-3 font-dm ${
         center ? "text-2xl" : "text-2xl"
-      } border-red rounded-lg py-2 relative px-3`}
+      } border-red rounded-md shadow-sm py-2 relative px-3`}
     >
       <h1 className={`z-10 relative ${center ? "text-center" : ""}`}>{name}</h1>
       <span

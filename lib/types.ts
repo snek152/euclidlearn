@@ -18,5 +18,6 @@ export type Course = {
   name: string;
   desc: string;
   slug: string;
+  type?: "math" | "science" | "engineering" | "humanities";
   curriculum: string[];
 };
