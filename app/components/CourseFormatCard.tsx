@@ -120,7 +120,7 @@ export interface CourseFormatCardProps {
 
 export default function CourseFormatCard(props: CourseFormatCardProps) {
   return (
-    <div className="rounded-2xl group border-red border-opacity-50 border shadow-sm flex flex-col relative p-4 justify-start items-center">
+    <div className="rounded-2xl group border-red border-opacity-50 border shadow-sm flex flex-col relative p-4 justify-start items-cente bg-white bg-opacity-50 backdrop-blur-sm">
       {props.icon}
       <h1 className="font-dm text-2xl text-center">{props.title}</h1>
       <p className="font-antic text-xl text-center">{props.content}</p>

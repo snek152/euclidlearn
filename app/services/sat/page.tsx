@@ -4,6 +4,8 @@ import CourseLogistics from "../CourseLogistics";
 import CourseCard from "../CourseCard";
 import CourseFormatCard from "@/app/components/CourseFormatCard";
 import { Metadata } from "next";
+import HomeSection from "@/app/components/HomeSection";
+import trusted from "@/images/trusted.png";
 
 export const metadata: Metadata = {
   title: "EuclidLearn | SAT Prep",
@@ -23,7 +25,7 @@ export default function Page() {
         // backTo="Test Prep"
         // backToHref="/services/testprep"
       />
-      <section className="p-5">
+      {/* <section className="p-5">
         {testprepCourses[0].curriculum.map((unit, i) => (
           // <div className="p-5" key={i}>
           //   <h1 className="font-dm text-3xl">{unit}</h1>
@@ -34,7 +36,7 @@ export default function Page() {
           />
           // </div>
         ))}
-      </section>
+      </section> */}
       <section className="p-5">
         <div className="grid grid-cols-4 gap-4">
           {[1, 2, 3, 4].map((i) => (
@@ -62,7 +64,15 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <CourseLogistics {...testprepCourses[0].logistics} />
+      <section className="p-5">
+        <HomeSection
+          title="Get ready for test day by practicing with purpose"
+          description="Eiusmod commodo aliquip enim aliquip officia pariatur magna officia mollit fugiat ea mollit non labore. Exercitation duis consectetur nulla consequat. Minim mollit aute commodo cupidatat ex sunt labore proident elit. Labore aliquip aute est magna do quis consequat veniam minim proident ipsum."
+          minimal
+          imageSrc={trusted}
+        />
+      </section>
+      {/* <CourseLogistics {...testprepCourses[0].logistics} /> */}
     </section>
   );
 }
