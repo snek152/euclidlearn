@@ -10,6 +10,7 @@ import results from "@/images/results.png";
 import CourseCard from "./components/CourseCard";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
+import Price from "./components/Price";
 
 export default function Home() {
   return (
@@ -181,6 +182,22 @@ export default function Home() {
         </div>
       </section> */}
       <Testimonials />
+      <section className="p-5">
+        <div className="grid grid-cols-2 gap-5">
+          <Price
+            pricing="$70"
+            classType="Private Lessons"
+            benefits={["1 student", "Gold Mentor", "1 office hour/week"]}
+            className="border border-red border-opacity-50 rounded-xl shadow-md"
+          />
+          <Price
+            pricing="$90"
+            classType="Premium Private Lessons"
+            benefits={["1 student", "Platinum Mentor", "1 office hour/week"]}
+            className="border border-red border-opacity-50 rounded-xl shadow-md"
+          />
+        </div>
+      </section>
       <FAQ />
     </>
   );
