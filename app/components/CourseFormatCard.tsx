@@ -3,7 +3,7 @@ export const svgThing = (
     viewBox="0 0 384 12"
     fill="none"
     aria-hidden="true"
-    className="absolute right-0 top-full w-full -translate-x-10 group-hover:opacity-100 opacity-25 max-w-[120%] transition duration-150"
+    className="absolute right-0 top-full w-full -translate-x-5 group-hover:opacity-100 opacity-25 max-w-[120%] transition duration-150"
   >
     <mask
       id=":r3:-a"

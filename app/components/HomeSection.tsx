@@ -8,6 +8,7 @@ interface HomeSectionProps {
   reverse?: boolean;
   minimal?: boolean;
   video?: string;
+  topText?: string;
 }
 
 export default function HomeSection(props: HomeSectionProps) {
@@ -42,9 +43,14 @@ export default function HomeSection(props: HomeSectionProps) {
           props.minimal ? "gap-1 md:gap-2" : "md:px-5 md:py-10 gap-2 md:gap-5 "
         }`}
       >
+        {props.topText && (
+          <h2 className="font-dekko text-lg leading-3 uppercase">
+            {props.topText}
+          </h2>
+        )}
         <h1
           className={`font-dm ${
-            props.minimal ? "text-[2.5rem] leading-10" : "text-4xl"
+            props.minimal ? "text-[2.5rem] leading-[3rem]" : "text-4xl"
           }`}
         >
           {props.title}

@@ -76,7 +76,43 @@ export default function Page() {
         </div>
       </section>
       <section className="p-5">
-        <h1 className="text-4xl font-dm text-center">Our Training</h1>
+        <h1 className="text-4xl font-dm text-center mb-2">At A Glance</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="group relative rounded-lg p-3 border border-navy border-opacity-50">
+            <h1 className="font-bold font-dm text-4xl text-black mb-1 text-center">
+              Top 2.5%
+            </h1>
+            <h2 className="font-antic text-xl text-center">
+              of AMC10 test-takers qualify for AIME.
+            </h2>
+            {svgThing}
+          </div>
+          <div className="group relative rounded-lg p-3 border border-navy border-opacity-50">
+            <h1 className="font-bold font-dm text-4xl text-black mb-1 text-center">
+              15 Questions
+            </h1>
+            <h2 className="font-antic text-xl text-center">on the exam.</h2>
+            {svgThing}
+          </div>
+          <div className="group relative rounded-lg p-3 border border-navy border-opacity-50">
+            <h1 className="font-bold font-dm text-4xl text-black mb-1 text-center">
+              180 Minutes
+            </h1>
+            <h2 className="font-antic text-xl text-center">
+              given in the exam.
+            </h2>
+            {svgThing}
+          </div>
+          <div className="group relative rounded-lg p-3 border border-navy border-opacity-50">
+            <h1 className="font-bold font-dm text-4xl text-black mb-1 text-center">
+              Increasing Difficulty
+            </h1>
+            <h2 className="font-antic text-xl text-center">
+              of short-answer computational problems as the test progresses.
+            </h2>
+            {svgThing}
+          </div>
+        </div>
       </section>
       {/* <CourseLogistics {...testprepCourses[1].logistics} /> */}
     </section>

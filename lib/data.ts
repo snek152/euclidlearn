@@ -2,15 +2,8 @@ import { Course, NavLink, TeamMember } from "./types";
 
 export const apCourses: Course[] = [
   {
-    name: "AP Calculus AB",
-    desc: "Key Concepts: Differentiation, integration, limits, and application of derivatives and integrals.\nTesting Practice: Weekly quizzes, timed exams, and comprehensive review sessions covering topics from AB Calculus, including multiple-choice and free-response question practice.",
-    type: "math",
-    slug: "calc-bc",
-    curriculum: ["Derivatives", "Integrals"],
-  },
-  {
-    name: "AP Calculus BC",
-    desc: "Key Concepts: Differentiation, integration, limits, and application of derivatives and integrals.\nTesting Practice: Weekly quizzes, timed exams, and comprehensive review sessions covering topics from BC Calculus, including multiple-choice and free-response question practice.",
+    name: "AP Calculus AB/BC",
+    desc: "Key Concepts: Differentiation, integration, limits, and application of derivatives and integrals.\nTesting Practice: Weekly quizzes, timed exams, and comprehensive review sessions covering topics from both AB BC Calculus, including multiple-choice and free-response question practice.",
     type: "math",
     slug: "calc-bc",
     curriculum: ["Derivatives", "Integrals"],
