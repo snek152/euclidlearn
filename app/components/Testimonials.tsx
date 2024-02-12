@@ -1,5 +1,6 @@
 "use client";
 import Carousel from "react-grid-carousel";
+import { svgThing } from "./CourseFormatCard";
 
 const ArrowButton = (props: { side: "left" | "right" }) => {
   const icon =
@@ -76,7 +77,7 @@ const Testimonial = (props: { name: string; content: string }) => {
 
 export default function Testimonials() {
   return (
-    <section className="relative rounded-2xl border-red border-opacity-50 border shadow-sm mx-5 grid grid-cols-3 divide-x divide-red divide-opacity-50">
+    <section className="relative rounded-2xl border-red border-opacity-50 border shadow-sm mx-5 grid grid-cols-3 divide-x divide-red divide-opacity-50 group">
       {/* <svg
         className="absolute w-screen md:min-w-0 -left-5 -top-[7vw] z-0 rotate-180"
         viewBox="0 0 1440 490"
@@ -125,6 +126,7 @@ export default function Testimonials() {
       />
       {/* </Carousel.Item>
       </Carousel> */}
+      {svgThing}
     </section>
   );
 }
