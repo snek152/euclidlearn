@@ -181,8 +181,10 @@ export default function Home() {
           </div>
         </div>
       </section> */}
+      <h1 className="font-dm text-4xl pl-5 pb-5">Testimonials</h1>
       <Testimonials />
       <section className="p-5">
+        <h1 className="font-dm text-4xl pb-5">Pricing</h1>
         <div className="grid grid-cols-2 gap-5">
           <Price
             pricing="$70"

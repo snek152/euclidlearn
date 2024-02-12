@@ -57,7 +57,7 @@ const Testimonial = (props: { name: string; content: string }) => {
             key={i}
             viewBox="0 0 24 24"
             // fill="currentColor"
-            className="w-6 h-6 fill-navy"
+            className="w-6 h-6 fill-yellow-500"
           >
             <path
               fillRule="evenodd"
@@ -66,6 +66,7 @@ const Testimonial = (props: { name: string; content: string }) => {
             />
           </svg>
         ))}
+        <span className="ml-3 text-base font-dekko">Rated 5/5</span>
       </div>
       <p className="font-antic text-base md:text-xl font-semibold">
         {props.content}
@@ -109,19 +110,19 @@ export default function Testimonials() {
       >
         <Carousel.Item> */}
       <Testimonial
-        name="Charlie"
+        name="Charlie (Las Vegas, NV)"
         content="Anirudh is an excellent mentor that helped me prepare for the SAT. His knowledge and experience in the SAT is unmatched. I would highly recommend him for any level of SAT preparation. He is a very friendly and patient person, who is great at explaining difficult problems through clear diagrams and examples. Thanks to him, preparing for the SAT wasn't as scary as I had imagined, and I ended up doing pretty well!"
       />
       {/* </Carousel.Item>
         <Carousel.Item> */}
       <Testimonial
-        name="Daniel"
+        name="Daniel (San Jose, CA)"
         content="Euclid Learn helped me develop a strategic plan to navigate high school by clarifying what I should prioritize. Through Abhinav's guidance, I was able to publish my research paper in a respectable journal. Furthermore, his suggestions improved my grades, time management, and confidence in my abilities. I recommend Abhinav for anyone who is trying to prioritize their academic goals."
       />
       {/* </Carousel.Item>
         <Carousel.Item> */}
       <Testimonial
-        name="Anna"
+        name="Anna (Tribeca, NY)"
         content="Euclid Learn has done an excellent job of solidifying my daughter's understanding of calculus. My daughter significantly improved her testing average and grades in a short period of time. In essence, these classes identify the real questions that appear on assessments and provide solutions in a way that is simple for the student to comprehend.  We are grateful to Abhinav for giving our daughter such a positive learning environment throughout the summer."
       />
       {/* </Carousel.Item>
