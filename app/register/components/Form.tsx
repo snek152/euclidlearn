@@ -173,7 +173,7 @@ export default function F() {
           {/* <label htmlFor="parentName" className="font-antic">
           Parent Name
         </label> */}
-          <div className="grid gap-2 grid-cols-2 md:grid-cols-4 py-2 w-full">
+          <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 py-2 w-full">
             <div>
               <Field
                 id="parentName"
@@ -268,7 +268,7 @@ export default function F() {
                   leaveFrom="opacity-100"
                   leaveTo="opacity-0"
                 >
-                  <Listbox.Options className="absolute left-0 mt-3 overflow-hidden origin-top-right rounded-lg bg-[#fff] border-gray divide-x divide-y divide-navy divide-opacity-5 shadow-xl focus:outline-none grid grid-cols-4 z-20 w-[calc(100vw-2*1.25rem-2*1rem)]">
+                  <Listbox.Options className="absolute left-0 mt-3 overflow-hidden origin-top-right rounded-lg bg-[#fff] border-gray md:divide-x divide-y divide-navy divide-opacity-5 shadow-xl focus:outline-none grid md:grid-cols-4 z-20 w-[calc(100vw-2*1.25rem-2*1rem)]">
                     {subjects.map((subject, i) => (
                       <Listbox.Option
                         value={subject}
@@ -325,7 +325,7 @@ export default function F() {
                   leaveFrom="opacity-100"
                   leaveTo="opacity-0"
                 >
-                  <Listbox.Options className="absolute left-0 mt-3 min-w-max overflow-hidden origin-top-right rounded-lg bg-[#fff] border-gray divide-x divide-navy divide-opacity-5 flex shadow-xl focus:outline-none z-20">
+                  <Listbox.Options className="absolute right-0 md:left-0 mt-3 min-w-max overflow-hidden origin-top-right rounded-lg bg-[#fff] border-gray divide-x divide-navy divide-opacity-5 flex shadow-xl focus:outline-none z-20">
                     {grades.map((grade, i) => (
                       <Listbox.Option
                         value={grade}
