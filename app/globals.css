@@ -5,7 +5,8 @@
 body,
 html {
   @apply bg-white;
-  scrollbar-color: #dde9ef #3f3fb3;
+  /* scrollbar-color: #dde9ef #274c77; */
+  scrollbar-color: #274c77 #edf0f3;
 }
 
 body {

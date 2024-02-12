@@ -28,6 +28,12 @@ export default function Page() {
       />
       <section className="p-5">
         <HomeSection
+          title="The USA Computing Olympiad"
+          description="Dolore in non velit tempor ut irure reprehenderit duis ut labore. Fugiat tempor anim eu elit labore pariatur esse consectetur laborum velit tempor et culpa officia. Nostrud nulla ipsum est officia deserunt laboris id proident eiusmod labore est. Nisi laboris exercitation ut ullamco sint occaecat deserunt adipisicing commodo consequat est aute quis. "
+          imageSrc={mentor}
+          minimal
+        />
+        <HomeSection
           title="Private Lessons"
           description="Dolore in non velit tempor ut irure reprehenderit duis ut labore. Fugiat tempor anim eu elit labore pariatur esse consectetur laborum velit tempor et culpa officia. Nostrud nulla ipsum est officia deserunt laboris id proident eiusmod labore est. Nisi laboris exercitation ut ullamco sint occaecat deserunt adipisicing commodo consequat est aute quis. "
           imageSrc={mentor}
