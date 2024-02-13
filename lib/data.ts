@@ -189,7 +189,7 @@ export const teamMembers: TeamMember[] = [
       "USAMO",
     ],
     bio: "Hey there! I'm Woojin and I absolutely love hardware engineering. When I'm not tinkering with tech, you'll find me collecting Pokémon cards, diving into 3D printing projects, and working on unique animations.",
-    image: "/team/woojin.png",
+    image: "/team/woojin.jpg",
   },
   {
     name: "Abhinav Raja",
@@ -202,7 +202,7 @@ export const teamMembers: TeamMember[] = [
       // "STEM Expert",
     ],
     bio: "Hey, I'm Abhinav! I love exploring machine learning in military applications. Outside of that, I'm into chess, tennis, and making music in my free time.",
-    image: "/team/abhinav.png",
+    image: "/team/abhinav.jpg",
   },
   {
     name: "Anirudh Shyam",
@@ -213,6 +213,6 @@ export const teamMembers: TeamMember[] = [
       "4 Years of Mentoring Experience",
     ],
     bio: "Hello, I'm Anirudh, and my passion lies in psychology. During my free time, I find enjoyment in watching sports, delving into Marvel movies, collecting cards, and bonding with my two dogs, Scout and April.",
-    image: "/trusted.png",
+    image: "/team/anirudh.png",
   },
 ];
