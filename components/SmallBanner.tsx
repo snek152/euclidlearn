@@ -24,7 +24,7 @@ export default function SmallBanner(props: SmallBannerProps) {
         </p>
       )}
       <svg
-        className="absolute top-80 z-0"
+        className="absolute top-80 z-0 origin-top scale-y-75"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
       >
@@ -38,7 +38,7 @@ export default function SmallBanner(props: SmallBannerProps) {
         src={bg}
         fill
         alt="A grid of graduation caps"
-        className="absolute w-full [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.2))] !h-[calc(100%+7vw)] z-0 opacity-80 object-cover select-none"
+        className="absolute w-full [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.2))] !h-[calc(100%+6vw)] z-0 opacity-80 object-cover select-none"
         draggable={false}
         loading="eager"
       />

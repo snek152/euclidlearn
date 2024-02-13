@@ -18,7 +18,7 @@ export default function Page() {
   return (
     <section>
       <CourseBanner
-        title={"American Invitational Mathematics Examination (AIME)"}
+        title={"American Invitational Mathematics Exam"}
         description={
           "Euclid Learn excels in preparing students for the USA Computing Olympiad (USACO), a prestigious competition that demonstrates advanced problem solving ability. Beyond coding, the USACO instills a strategic problem-solving mindset, shaping analytical thinkers to excel beyond the competition."
         }
