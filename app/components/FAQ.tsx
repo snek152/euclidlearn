@@ -37,18 +37,24 @@ export default function FAQ() {
 
   return (
     <section className="p-5">
-      <h1 className="font-dm text-4xl pb-2">Frequently Asked Questions</h1>
+      <h1 className="font-dm text-4xl pb-2 text-center">
+        Frequently Asked Questions
+      </h1>
       <div className="mx-5">
         {faq.map((arr, i) =>
           width >= 768 ? (
             <Disclosure key={i}>
-              <Disclosure.Button className="flex justify-between w-full py-2 font-dm text-2xl text-left rounded-lg focus:outline-none cursor-default md:cursor-pointer">
+              <Disclosure.Button
+                className={`flex justify-between w-full py-3 font-medium font-antic text-2xl text-left focus:outline-none cursor-default md:cursor-pointer ${
+                  i !== 0 ? "border-t border-t-gray border-opacity-50" : ""
+                }`}
+              >
                 {arr[0]}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth={1.5}
+                  strokeWidth={2.5}
                   stroke="currentColor"
                   className="w-6 h-6 md:block hidden"
                 >
@@ -60,7 +66,7 @@ export default function FAQ() {
                 </svg>
               </Disclosure.Button>
               <Disclosure.Panel>
-                <p className="px-4 font-antic text-lg">{arr[1]}</p>
+                <p className="px-4 pb-2 font-antic text-lg">{arr[1]}</p>
               </Disclosure.Panel>
             </Disclosure>
           ) : (
