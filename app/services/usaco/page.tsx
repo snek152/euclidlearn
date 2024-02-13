@@ -3,7 +3,7 @@ import CourseBanner from "../CourseBanner";
 import CourseLogistics from "../CourseLogistics";
 import CourseCard from "../CourseCard";
 import HomeSection from "@/app/components/HomeSection";
-import mentor from "@/images/mentor.png";
+import code from "@/images/code.jpg";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function Page() {
       <CourseBanner
         title={"USA Computing Olympiad"}
         description={
-          "Euclid Learn excels in preparing students for the USA Computing Olympiad (USACO), a prestigious competition that demonstrates advanced problem solving ability. Beyond coding, the USACO instills a strategic problem-solving mindset, shaping analytical thinkers to excel beyond the competition."
+          "Elevate your experience by working with a mentor from our team. Our mentors have extensive experience in competitive programming and have achieved top scores."
         }
         // backTo="Test Prep"
         // backToHref="/services/testprep"
@@ -30,15 +30,15 @@ export default function Page() {
         <HomeSection
           topText="About USACO"
           title="The USA Computing Olympiad"
-          description="Dolore in non velit tempor ut irure reprehenderit duis ut labore. Fugiat tempor anim eu elit labore pariatur esse consectetur laborum velit tempor et culpa officia. Nostrud nulla ipsum est officia deserunt laboris id proident eiusmod labore est. Nisi laboris exercitation ut ullamco sint occaecat deserunt adipisicing commodo consequat est aute quis. "
-          imageSrc={mentor}
+          description="Euclid Learn excels in preparing students for the USA Computing Olympiad (USACO), a prestigious competition that demonstrates advanced problem solving ability. Beyond coding, the USACO instills a strategic problem-solving mindset, shaping analytical thinkers to excel beyond the competition."
+          imageSrc={code}
+          video="/USACOvideo.mp4"
           minimal
         />
         <HomeSection
           title="Private Lessons"
           description="Dolore in non velit tempor ut irure reprehenderit duis ut labore. Fugiat tempor anim eu elit labore pariatur esse consectetur laborum velit tempor et culpa officia. Nostrud nulla ipsum est officia deserunt laboris id proident eiusmod labore est. Nisi laboris exercitation ut ullamco sint occaecat deserunt adipisicing commodo consequat est aute quis. "
-          imageSrc={mentor}
-          video="/USACOvideo.mp4"
+          imageSrc={code}
           reverse
           minimal
         />
