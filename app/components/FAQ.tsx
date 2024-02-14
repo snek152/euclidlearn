@@ -40,7 +40,7 @@ export default function FAQ() {
       <h1 className="font-dm text-4xl pb-2 text-center">
         Frequently Asked Questions
       </h1>
-      <div className="mx-5">
+      <div className="mx-1">
         {faq.map((arr, i) =>
           width >= 768 ? (
             <Disclosure key={i}>
