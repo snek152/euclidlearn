@@ -168,8 +168,7 @@ export default function Home() {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="currentColor"
-                className="h-20"
+                className="h-20 stroke-navy"
               >
                 <path
                   strokeLinecap="round"
@@ -188,8 +187,7 @@ export default function Home() {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="currentColor"
-                className="h-20"
+                className="h-20 stroke-navy"
               >
                 <path
                   strokeLinecap="round"
@@ -208,8 +206,7 @@ export default function Home() {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="currentColor"
-                className="h-20"
+                className="h-20 stroke-navy"
               >
                 <path
                   strokeLinecap="round"
@@ -228,8 +225,7 @@ export default function Home() {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="currentColor"
-                className="h-20"
+                className="h-20 stroke-navy"
               >
                 <path
                   strokeLinecap="round"
