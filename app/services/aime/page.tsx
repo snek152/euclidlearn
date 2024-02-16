@@ -29,24 +29,20 @@ export default function Page() {
         <div className="rounded-2xl group mb-4 border-red border-opacity-50 border shadow-sm relative p-4 bg-white">
           <h1 className="font-dm text-3xl">What is AIME?</h1>
           <p className="font-antic text-lg pt-1">
-            Irure dolore enim aliquip et commodo mollit laborum veniam enim
-            occaecat. Nisi officia id adipisicing duis sunt ea sit est duis.
-            Tempor nostrud cupidatat amet voluptate ut ea aliqua reprehenderit
-            non incididunt. Do est ad ullamco aute ut eu anim Lorem ea ex
-            cupidatat laborum. Occaecat sit officia ex dolor irure esse nulla
-            ullamco duis est consequat non. Ad culpa elit elit sit elit laborum
-            et nisi eu ex quis. Officia consectetur mollit eiusmod elit quis
-            ullamco excepteur eiusmod magna cillum non. Duis sunt sint labore
-            deserunt. Nostrud Lorem veniam velit minim eu. Consectetur aliqua
-            occaecat consectetur tempor velit. Ex ut laborum sunt dolore eu
-            occaecat mollit id minim veniam ad esse ad amet. Nisi nulla sint
-            cupidatat ea incididunt do laboris excepteur eu aliqua sit ad
-            ullamco nulla. In officia deserunt anim voluptate tempor pariatur ex
-            est. Irure laborum aliqua amet aliqua dolore non laborum minim
-            nulla. Consectetur fugiat pariatur amet fugiat in consequat ullamco
-            reprehenderit exercitation ut cupidatat aute. Reprehenderit proident
-            aliquip ea adipisicing enim velit magna dolor id. Labore qui nisi
-            cillum veniam laborum.
+            The American Invitational Mathematics Exam (AIME) is a highly
+            prestigious math competition organized by the Mathematical
+            Association of America (MAA). AIME math contests are the next step
+            in the AMC series of competitions that culminate with the
+            International Mathematical Olympiad (IMO). Top scorers of the AMC 10
+            and 12 are invited to appear for the AIME. Each year, there are
+            roughly 3000 AIME qualifiers, though the exact number varies. The
+            AIME test consists of 15 questions to be completed in 3 hours, and
+            each answer is an integer between 000 and 999. A student{"'"}s AIME
+            score is calculated by the number of questions they answer
+            correctly. There is no negative marking in AIME results. Top
+            students who receive an AIME qualifying score are invited to take
+            the USA{"'"}s national math olympiad, which is the next stage in the
+            series of math competitions.
           </p>
           {svgThing}
         </div>

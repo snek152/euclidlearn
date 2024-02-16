@@ -275,7 +275,7 @@ export default function Home() {
         </a>
       </h2>
       <Testimonials />
-      <section className="p-5 pt-10">
+      <section className="p-5 pt-10 scroll-m-12" id="price">
         <h1 className="font-dm text-4xl pb-2 text-center">
           Online Mentorship Plans
         </h1>

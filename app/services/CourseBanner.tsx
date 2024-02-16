@@ -59,6 +59,13 @@ export default function CourseBanner(props: CourseBannerProps) {
           >
             Register Now
           </LinkButton>
+          <LinkButton
+            className="bg-red text-white px-10 py-1 text-lg"
+            hoverClass="bg-black bg-opacity-30 text-white"
+            href="/#price"
+          >
+            Pricing
+          </LinkButton>
         </div>
       </div>
       <svg

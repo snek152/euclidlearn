@@ -1,3 +1,4 @@
+import { svgThing } from "@/app/components/CourseFormatCard";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 
@@ -11,8 +12,8 @@ interface TeamCardProps {
 
 export default function TeamCard(props: TeamCardProps) {
   return (
-    <div className="m-2">
-      <div className="bg-white bg-opacity-50 backdrop-blur-md relative rounded-xl gap-3 grid grid-cols-1 md:grid-cols-7 w-full px-5 py-3 shadow-sm border border-black border-opacity-20">
+    <div className="m-5">
+      <div className="bg-white bg-opacity-50 backdrop-blur-md relative rounded-xl gap-3 grid grid-cols-1 md:grid-cols-7 w-full px-5 py-3 group shadow-sm border border-black border-opacity-20">
         <Image
           src={props.image}
           alt={props.name}
@@ -50,6 +51,7 @@ export default function TeamCard(props: TeamCardProps) {
             ))}
           </ul>
         </div>
+        {svgThing}
       </div>
     </div>
   );

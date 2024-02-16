@@ -55,8 +55,36 @@ export default function HomeSection(props: HomeSectionProps) {
         >
           {props.title}
         </h1>
-        <h2 className="font-antic text-xl text-left max-w-[60ch]">
-          {props.description}
+        <h2
+          className={`font-antic ${
+            props.minimal ? "text-xl" : "text-xl"
+          } text-left`}
+        >
+          {props.description.includes("\n") ? (
+            <>
+              {props.description.split("\n")[0]}
+              <ol className="list-decimal list-inside py-2 space-y-1">
+                {props.description
+                  .split("\n")
+                  .filter((d) => d !== "")
+                  .slice(
+                    1,
+                    props.description.split("\n").filter((d) => d !== "")
+                      .length - 1
+                  )
+                  .map((d, i) => (
+                    <li key={i}>{d}</li>
+                  ))}
+              </ol>
+              {
+                props.description.split("\n")[
+                  props.description.split("\n").length - 1
+                ]
+              }
+            </>
+          ) : (
+            props.description
+          )}
         </h2>
       </div>
     </section>

@@ -37,7 +37,10 @@ export default function Page() {
         />
         <HomeSection
           title="Private Lessons"
-          description="Dolore in non velit tempor ut irure reprehenderit duis ut labore. Fugiat tempor anim eu elit labore pariatur esse consectetur laborum velit tempor et culpa officia. Nostrud nulla ipsum est officia deserunt laboris id proident eiusmod labore est. Nisi laboris exercitation ut ullamco sint occaecat deserunt adipisicing commodo consequat est aute quis. "
+          description={`Lessons are designed around two fundamental principles:\n
+          Every student has a different level of coding and problem-solving experience, which improves over time\n
+          Mastering algorithmic programming requires regular practice and reflective learning\n
+          Upon enrollment, our mentors conduct a thorough assessment of the student's existing programming profficency, then we develop a personalized syllabus based on the student's specific needs and aspirations. Throughout the entirety of their educational journey, students are paired with a dedicated mentor who guides them through every phase of advancement, starting from the foundational levels of USACO Bronze and potentially progressing to the more advanced terrain of USACO Platinum.`}
           imageSrc={code}
           reverse
           minimal
@@ -50,25 +53,25 @@ export default function Page() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
           <CourseCard
             name="USACO Bronze"
-            desc="Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur."
+            desc="At the bronze level, students build on their programming fundamentals, designing relatively simple algorithms to solve various problems. Students are exposed to fundamental techniques like sorting and recursion."
             center
             to="to-orange-300"
           />
           <CourseCard
             name="USACO Silver"
-            desc="Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur."
+            desc="At the silver level, students begin learning real-world data structures and algorithms. Students learn how to process data using sets, efficiently find items via binary search, and traverse graphs via Depth First Search."
             center
             to="to-gray"
           />
           <CourseCard
             name="USACO Gold"
-            desc="Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur."
+            desc="At the gold level, problems often require multiple steps combined with key deductions. Students learn data structures like Fenwick Trees, Disjoint Set Unions, and more, along with famous algorithms like Dijkstra's Algorithm."
             center
             to="to-amber-400"
           />
           <CourseCard
             name="USACO Platinum"
-            desc="Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur. Lorem minim magna pariatur consequat duis consectetur."
+            desc="At the platinum level, problems become extremely challenging, as the full array of techniques and algorithms used in competitive programming can appear. The top 24 contestants are invited to the USA National Training camp."
             center
             to="to-zinc-900"
           />
