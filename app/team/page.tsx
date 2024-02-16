@@ -31,7 +31,7 @@ export default function About() {
           Join Us
         </LinkButton>
       </SmallBanner>
-      <section>
+      <section className="px-10">
         {teamMembers.map(({ bio, ...rest }, i) => (
           <TeamCard description={bio} {...rest} key={i} />
         ))}

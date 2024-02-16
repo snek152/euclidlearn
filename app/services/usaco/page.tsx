@@ -26,7 +26,7 @@ export default function Page() {
         // backTo="Test Prep"
         // backToHref="/services/testprep"
       />
-      <section className="p-5">
+      <section className="p-5 mx-10">
         <HomeSection
           topText="About USACO"
           title="The USA Computing Olympiad"
@@ -46,7 +46,7 @@ export default function Page() {
           minimal
         />
       </section>
-      <section className="p-5">
+      <section className="p-5 mx-10">
         <h1 className="font-dm text-4xl text-center mb-2">
           A Bottom-Up Approach
         </h1>
