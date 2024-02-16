@@ -25,7 +25,7 @@ export default function Page() {
         // backTo="Test Prep"
         // backToHref="/services/testprep"
       />
-      <section className="p-5 mx-10">
+      <section className="p-5 mx-20">
         <div className="rounded-2xl group mb-4 border-red border-opacity-50 border shadow-sm relative p-4 bg-white">
           <h1 className="font-dm text-3xl">What is AIME?</h1>
           <p className="font-antic text-lg pt-1">
@@ -71,7 +71,7 @@ export default function Page() {
           {svgThing}
         </div>
       </section>
-      <section className="p-5 mx-10">
+      <section className="p-5 mx-20">
         <h1 className="text-4xl font-dm text-center mb-2">At A Glance</h1>
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-5">
           <div className="group relative rounded-lg p-3 border border-navy border-opacity-50">

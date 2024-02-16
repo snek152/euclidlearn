@@ -60,7 +60,7 @@ export default function Home() {
           draggable={false}
         />
       </section>
-      <div className="px-20">
+      <div className="px-24">
         <section className="p-5">
           <h1 className="font-dm text-4xl mb-5 text-center">What We Offer</h1>
           <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-5">

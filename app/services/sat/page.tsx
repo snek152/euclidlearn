@@ -37,7 +37,7 @@ export default function Page() {
           // </div>
         ))}
       </section> */}
-      <section className="p-5 mx-10">
+      <section className="p-5 mx-20">
         <div className="grid grid-cols-4 gap-4">
           {[1, 2, 3, 4].map((i) => (
             <CourseFormatCard
@@ -64,7 +64,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section className="p-5 mx-10">
+      <section className="p-5 mx-20">
         <HomeSection
           title="Get ready for test day by practicing with purpose"
           description="Eiusmod commodo aliquip enim aliquip officia pariatur magna officia mollit fugiat ea mollit non labore. Exercitation duis consectetur nulla consequat. Minim mollit aute commodo cupidatat ex sunt labore proident elit. Labore aliquip aute est magna do quis consequat veniam minim proident ipsum."
