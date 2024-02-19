@@ -7,11 +7,11 @@ import { teamMembers } from "@/lib/data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "EuclidLearn | Meet the Team",
+  title: "EuclidLearn | About Us",
   openGraph: {
     type: "website",
-    title: "EuclidLearn | Meet the Team",
-    url: "https://euclidlearn.com/team",
+    title: "EuclidLearn | About Us",
+    url: "https://euclidlearn.com/about",
   },
 };
 

@@ -127,8 +127,8 @@ export const navLinks: NavLink[] = [
     label: "Home",
   },
   {
-    href: "/team",
-    label: "Meet the Team",
+    href: "/about",
+    label: "About Us",
   },
   {
     label: "Services",

@@ -16,7 +16,10 @@ export default function Navbar() {
       as="nav"
       className="rounded-full left-1 right-1 my-1 bg-navy shadow-sm pl-3 text-white flex justify-between items-center fixed z-50"
     >
-      <h1 className="font-dm md:py-0 py-1 text-xl md:text-2xl inline-flex">
+      <Link
+        href="/"
+        className="font-dm md:py-0 py-1 text-xl md:text-2xl inline-flex"
+      >
         <Image
           src={learn}
           height={30}
@@ -25,7 +28,7 @@ export default function Navbar() {
           className="aspect-square transform scale-[0.80]"
         />
         EuclidLearn
-      </h1>
+      </Link>
       <div>
         <Popover.Button className="text-xl outline-none grid place-items-center h-full md:sr-only pr-2">
           {({ open }) =>
@@ -366,7 +369,7 @@ export default function Navbar() {
           )}
           <LinkButton
             href="/register"
-            className="text-white bg-red text-xl px-5 py-2"
+            className="text-white bg-red text-xl px-5 py-3"
             hoverClass="text-white bg-black bg-opacity-30"
           >
             Register Now

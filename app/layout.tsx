@@ -1,11 +1,25 @@
 import type { Metadata } from "next";
-import { Antic, DM_Serif_Display, Raleway, Urbanist } from "next/font/google";
+import {
+  Antic,
+  Arimo,
+  DM_Serif_Display,
+  Raleway,
+  Urbanist,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const dm = DM_Serif_Display({
-  weight: "400",
+// const dm = DM_Serif_Display({
+//   weight: "400",
+//   style: "normal",
+//   display: "swap",
+//   variable: "--font-dm-serif-display",
+//   subsets: ["latin"],
+// });
+
+const dm = Arimo({
+  weight: "600",
   style: "normal",
   display: "swap",
   variable: "--font-dm-serif-display",
