@@ -61,7 +61,7 @@ export default function Home() {
         />
       </section>
       <div className="px-10 lg:px-24">
-        <section className="p-5">
+        <section className="p-5 scroll-m-28" id="courses">
           <h1 className="font-dm text-4xl mb-5 text-center">What We Offer</h1>
           <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-5">
             <CourseCard title="AP" href="/services/ap" />
