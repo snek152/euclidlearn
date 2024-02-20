@@ -32,7 +32,7 @@ export default function AP() {
         <h1 className="text-center font-dm text-4xl">
           Advanced Placement Courses
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 mt-5 mx-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 mt-5 mx-5 lg:mx-20">
           {apCourses.map((course, i) => (
             <CourseLinkButton course={course} key={i} />
           ))}
@@ -41,7 +41,7 @@ export default function AP() {
       {/* <section className="p-5">
         <CourseLogistics {...testprepCourses[0].logistics} />
       </section> */}
-      <section className="p-5 mx-20">
+      <section className="p-5 mx-5 lg:mx-20">
         <HomeSection
           title="Get a High Score and College Credit"
           description="Nulla sit cillum tempor laboris. Dolore labore aliqua amet adipisicing amet deserunt proident id tempor sunt. Est velit in esse cillum laboris deserunt duis adipisicing. Aliquip culpa culpa eu tempor deserunt sit exercitation consectetur labore esse aute et eu. Lorem cillum excepteur cillum consectetur."
@@ -50,7 +50,7 @@ export default function AP() {
           reverse
         />
       </section>
-      <section className="p-5 mx-20">
+      <section className="p-5 mx-5 lg:mx-20">
         <h1 className="text-center font-dm pb-2 text-4xl">Course Offerings</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 my-2 gap-3">
           <div className="border border-navy p-2 flex flex-col items-center rounded-lg shadow">

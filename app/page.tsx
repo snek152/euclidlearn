@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <section className="bg-blue/60 h-80 pt-20 mb-10 relative flex justify-center">
-        <div className="z-10 flex flex-col h-full gap-3 w-[95%] justify-center p-5 mx-20">
+        <div className="z-10 flex flex-col h-full gap-3 w-[95%] justify-center p-5 mx-5 lg:mx-20">
           <h1 className="font-dm text-3xl md:text-5xl">
             Student Oriented Academic Coaching
           </h1>
@@ -60,7 +60,7 @@ export default function Home() {
           draggable={false}
         />
       </section>
-      <div className="px-24">
+      <div className="px-10 lg:px-24">
         <section className="p-5">
           <h1 className="font-dm text-4xl mb-5 text-center">What We Offer</h1>
           <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-5">

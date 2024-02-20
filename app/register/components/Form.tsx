@@ -375,7 +375,7 @@ export default function F() {
           </div>
 
           <button
-            className={`font-dekko h-full rounded-full shadow-md relative inline-flex items-center justify-center overflow-hidden font-medium transition duration-300 ease-out group px-20 py-2 text-lg bg-red text-white mt-5`}
+            className={`font-dekko h-full rounded-full shadow-md relative inline-flex items-center justify-center overflow-hidden font-medium transition duration-300 ease-out group px-5 lg:px-20 py-2 text-lg bg-red text-white mt-5`}
             type="submit"
           >
             <span

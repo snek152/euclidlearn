@@ -19,7 +19,7 @@ export default function SmallBanner(props: SmallBannerProps) {
         <div className="flex gap-3">{props.children}</div>
       </div>
       {props.sideDescription && (
-        <p className="z-10 font-antic text-base md:text-xl pl-3 pt-2 md:p-0 md:text-center">
+        <p className="z-10 font-antic text-base md:text-xl pl-3 pt-2 md:p-0 md:pr-20 md:text-center">
           {props.sideDescription}
         </p>
       )}

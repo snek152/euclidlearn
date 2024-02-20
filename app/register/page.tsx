@@ -20,7 +20,7 @@ export default function Register() {
       >
         {""}
       </SmallBanner>
-      <section className="p-5 mx-20">
+      <section className="p-5 mx-5 lg:mx-20">
         <F />
       </section>
     </>
